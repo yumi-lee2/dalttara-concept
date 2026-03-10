@@ -1,3 +1,4 @@
+import Gnb from "./components/Gnb";
 import Hero from "./components/Hero";
 import WorldSection from "./components/WorldSection";
 import CharacterSection from "./components/CharacterSection";
@@ -9,7 +10,8 @@ import TargetSection from "./components/TargetSection";
 
 function App() {
   return (
-    <div className="bg-space-900 min-h-screen text-white">
+    <div id="top" className="bg-space-900 min-h-screen text-ivory relative">
+      <Gnb />
       <Hero />
       <WorldSection />
       <CharacterSection />

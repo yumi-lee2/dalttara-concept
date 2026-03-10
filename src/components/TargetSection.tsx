@@ -1,43 +1,152 @@
 import { motion } from "framer-motion";
 
+const star01 = "/assets/artifacts/star01.png";
+const star02 = "/assets/artifacts/star02.png";
+const star03 = "/assets/artifacts/star03.png";
+const sparkle1 = "/assets/artifacts/sparkle1.png";
+const sparkle2 = "/assets/artifacts/sparkle2.png";
+const sparkle3 = "/assets/artifacts/sparkle3.png";
+const sparkle5 = "/assets/artifacts/sparkle5.png";
+const sparkle6 = "/assets/artifacts/sparkle6.png";
+
+const targets = [
+  "감정적 교감을 중심으로 한 육성 게임을 좋아하는 유저",
+  "자신만의 캐릭터를 만들고 싶은 플레이어",
+  "수집과 이야기를 동시에 즐기는 유저",
+];
+
 const TargetSection = () => {
   return (
     <section
       id="target"
-      className="px-6 md:px-10 py-20 border-t border-white/5 bg-gradient-to-b from-space-900 to-black"
+      className="px-6 md:px-10 py-32 md:py-44 relative overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto space-y-10 text-center">
+      {/* Ambient center glow */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+        <div className="w-[480px] h-[480px] rounded-full bg-periwinkle/[0.06] blur-[130px]" />
+      </div>
+
+      <span className="absolute top-10 right-6 md:right-14 text-[8rem] md:text-[11rem] font-bold text-periwinkle/5 select-none leading-none pointer-events-none font-sans">
+        07
+      </span>
+
+      {/* Artifacts – scattered around the closing quote */}
+      <motion.img
+        src={star02}
+        alt=""
+        aria-hidden
+        className="absolute top-16 left-6 md:left-16 w-14 md:w-16 pointer-events-none select-none"
+        animate={{ y: [0, -10, 0], rotate: [0, 8, 0] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+      />
+      <motion.img
+        src={star01}
+        alt=""
+        aria-hidden
+        className="absolute top-20 right-8 md:right-20 w-12 pointer-events-none select-none"
+        animate={{ y: [0, -8, 0], rotate: [0, -7, 0] }}
+        transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
+      />
+      <motion.img
+        src={star03}
+        alt=""
+        aria-hidden
+        className="absolute bottom-28 left-8 md:left-20 w-10 md:w-12 pointer-events-none select-none"
+        animate={{ y: [0, -7, 0], rotate: [0, 6, 0] }}
+        transition={{ duration: 5.3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      />
+      <motion.img
+        src={star02}
+        alt=""
+        aria-hidden
+        className="absolute bottom-20 right-10 md:right-24 w-10 pointer-events-none select-none"
+        animate={{ y: [0, -9, 0], rotate: [0, -8, 0] }}
+        transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+      />
+
+      {/* Blue sparkles */}
+      <motion.img
+        src={sparkle1}
+        alt=""
+        aria-hidden
+        className="absolute top-1/3 left-4 md:left-12 w-16 md:w-20 pointer-events-none select-none"
+        animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.88, 1.06, 0.88] }}
+        transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+      />
+      <motion.img
+        src={sparkle2}
+        alt=""
+        aria-hidden
+        className="absolute bottom-1/3 right-4 md:right-12 w-14 md:w-18 pointer-events-none select-none"
+        animate={{ opacity: [0.35, 0.85, 0.35], scale: [0.85, 1.08, 0.85] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
+      />
+
+      {/* White cross sparkles */}
+      <motion.img
+        src={sparkle3}
+        alt=""
+        aria-hidden
+        className="absolute top-[45%] left-[10%] w-7 pointer-events-none select-none opacity-55"
+        animate={{ rotate: [0, 45, 0], scale: [0.9, 1.2, 0.9] }}
+        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
+      />
+      <motion.img
+        src={sparkle5}
+        alt=""
+        aria-hidden
+        className="absolute top-[55%] right-[12%] w-7 pointer-events-none select-none opacity-50"
+        animate={{ rotate: [0, -45, 0], scale: [0.9, 1.2, 0.9] }}
+        transition={{ duration: 3.2, repeat: Infinity, ease: "easeInOut", delay: 1.1 }}
+      />
+
+      {/* Large background star */}
+      <motion.img
+        src={sparkle6}
+        alt=""
+        aria-hidden
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] pointer-events-none select-none opacity-[0.04]"
+        animate={{ rotate: [0, 360] }}
+        transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+      />
+
+      <div className="max-w-3xl mx-auto text-center space-y-16 relative">
+        {/* Audience */}
         <motion.div
+          className="space-y-7"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6 }}
-          className="space-y-4"
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xs uppercase tracking-[0.25em] text-sky-300">
+          <p className="text-[11px] tracking-[0.3em] uppercase text-periwinkle">
             Target Audience
           </p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug">
+          <h2 className="font-serif text-3xl md:text-4xl text-ivory leading-tight">
             이런 플레이어를 위해 만들었습니다
           </h2>
-          <ul className="mt-2 space-y-2 text-sm md:text-base text-slate-200 text-left md:text-center md:inline-block">
-            <li>· 감정적 교감을 중심으로 한 육성 게임을 좋아하는 유저</li>
-            <li>· 자신만의 캐릭터를 만들고 싶은 플레이어</li>
-            <li>· 수집과 이야기를 동시에 즐기는 유저</li>
+          <ul className="space-y-2.5 text-ivory/55 text-sm md:text-base">
+            {targets.map((t) => (
+              <li key={t} className="flex items-center justify-center gap-2.5">
+                <span className="text-periwinkle/40 text-xs leading-none">◦</span>
+                {t}
+              </li>
+            ))}
           </ul>
         </motion.div>
 
+        {/* Closing quote */}
         <motion.div
-          initial={{ opacity: 0, y: 24 }}
+          className="space-y-5"
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="space-y-4"
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="text-xl md:text-2xl lg:text-3xl font-semibold text-slate-50">
-            “저 달생이… 어디서 키워?”
+          <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-ivory leading-snug">
+            "저 달생이… 어디서 키워?"
           </p>
-          <p className="text-sm md:text-base text-slate-300 max-w-xl mx-auto">
+          <p className="text-ivory/45 text-sm md:text-base max-w-sm mx-auto leading-relaxed">
             언젠가 누군가에게 이렇게 묻고 싶은, 나만의 달생이를 키우는 경험.
           </p>
         </motion.div>
@@ -47,4 +156,3 @@ const TargetSection = () => {
 };
 
 export default TargetSection;
-
