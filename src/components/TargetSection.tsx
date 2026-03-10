@@ -124,7 +124,7 @@ const TargetSection = () => {
             Target Audience
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-ivory leading-tight">
-            이런 플레이어를 위해 만들었습니다
+            이런 플레이어를 위한 게임입니다
           </h2>
           <ul className="space-y-2.5 text-ivory/55 text-sm md:text-base">
             {targets.map((t) => (

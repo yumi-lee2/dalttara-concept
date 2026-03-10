@@ -194,7 +194,7 @@ const CharacterSection = () => {
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="flex items-center gap-3">
-            <p className="text-[10px] tracking-[0.25em] uppercase text-ivory/30">종족 선택</p>
+            <p className="text-[10px] tracking-[0.25em] uppercase text-ivory/30 flex-shrink-0">종족 선택</p>
             <p className="text-xs text-periwinkle/60 font-serif">아직 만나지 못한 더 많은 달생이들이 당신을 기다리고 있습니다.</p>
           </div>
 

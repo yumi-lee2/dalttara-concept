@@ -74,7 +74,7 @@ const DifferentiationSection = () => {
           </h2>
           <p className="text-ivory/55 leading-relaxed">
             단순한 수치 성장이나 확률 뽑기가 아니라, 플레이어의 말과 감정이 직접 캐릭터를 만드는
-            구조에 집중했습니다.
+            구조에 집중합니다.
           </p>
         </motion.div>
 
