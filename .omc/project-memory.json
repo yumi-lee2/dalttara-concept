@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1773168093854,
+  "lastScanned": 1773171520327,
   "projectRoot": "/Users/nhn/Desktop/달따라/dalttara-concept",
   "techStack": {
     "languages": [
@@ -73,14 +73,14 @@
       "path": "public",
       "purpose": "Public files",
       "fileCount": 0,
-      "lastAccessed": 1773168093834,
+      "lastAccessed": 1773171520321,
       "keyFiles": []
     },
     "src": {
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1773168093834,
+      "lastAccessed": 1773171520321,
       "keyFiles": [
         "App.tsx",
         "index.css",
@@ -92,17 +92,17 @@
       "path": "public/assets",
       "purpose": "Static assets",
       "fileCount": 2,
-      "lastAccessed": 1773168093843,
+      "lastAccessed": 1773171520321,
       "keyFiles": [
-        "main.png",
-        "알.png"
+        "egg.png",
+        "main.png"
       ]
     },
     "src/components": {
       "path": "src/components",
       "purpose": "UI components",
       "fileCount": 9,
-      "lastAccessed": 1773168093846,
+      "lastAccessed": 1773171520321,
       "keyFiles": [
         "CharacterSection.tsx",
         "CoreGameplaySection.tsx",
@@ -112,40 +112,64 @@
   },
   "hotPaths": [
     {
-      "path": "src",
-      "accessCount": 2,
-      "lastAccessed": 1773168131107,
-      "type": "directory"
+      "path": "src/components/DifferentiationSection.tsx",
+      "accessCount": 12,
+      "lastAccessed": 1773173012973,
+      "type": "file"
     },
     {
-      "path": "src/components/WorldSection.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1773168236081,
+      "path": "src/App.tsx",
+      "accessCount": 8,
+      "lastAccessed": 1773172834838,
       "type": "file"
     },
     {
       "path": "src/components/CoreLoopSection.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1773168236099,
+      "accessCount": 8,
+      "lastAccessed": 1773172840413,
+      "type": "file"
+    },
+    {
+      "path": "src/components/CoreGameplaySection.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1773172265920,
+      "type": "file"
+    },
+    {
+      "path": "src/components/Gnb.tsx",
+      "accessCount": 7,
+      "lastAccessed": 1773172828645,
+      "type": "file"
+    },
+    {
+      "path": "src/components/WorldSection.tsx",
+      "accessCount": 5,
+      "lastAccessed": 1773171671868,
       "type": "file"
     },
     {
       "path": "src/components/ValueSystemSection.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1773168236112,
+      "accessCount": 5,
+      "lastAccessed": 1773172819330,
       "type": "file"
     },
     {
-      "path": "src/components/TargetSection.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1773168236209,
+      "path": "src/components/Hero.tsx",
+      "accessCount": 4,
+      "lastAccessed": 1773171563398,
       "type": "file"
     },
     {
-      "path": "src/components/DifferentiationSection.tsx",
-      "accessCount": 1,
-      "lastAccessed": 1773168236211,
+      "path": "src/components/CharacterSection.tsx",
+      "accessCount": 3,
+      "lastAccessed": 1773171619073,
       "type": "file"
+    },
+    {
+      "path": "",
+      "accessCount": 2,
+      "lastAccessed": 1773171531605,
+      "type": "directory"
     }
   ],
   "userDirectives": []

@@ -4,7 +4,6 @@ import WorldSection from "./components/WorldSection";
 import CharacterSection from "./components/CharacterSection";
 import CoreGameplaySection from "./components/CoreGameplaySection";
 import CoreLoopSection from "./components/CoreLoopSection";
-import ValueSystemSection from "./components/ValueSystemSection";
 import DifferentiationSection from "./components/DifferentiationSection";
 import TargetSection from "./components/TargetSection";
 
@@ -17,7 +16,6 @@ function App() {
       <CharacterSection />
       <CoreGameplaySection />
       <CoreLoopSection />
-      <ValueSystemSection />
       <DifferentiationSection />
       <TargetSection />
     </div>

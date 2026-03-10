@@ -159,7 +159,7 @@ const CharacterSection = () => {
       <div className="max-w-6xl mx-auto space-y-16">
         {/* Header */}
         <motion.div
-          className="max-w-2xl"
+          className="max-w-5xl"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -172,8 +172,8 @@ const CharacterSection = () => {
             단 하나뿐인 존재
           </h2>
           <p className="mt-5 text-ivory/60 leading-relaxed">
-            달생이는 플레이어와의 대화를 통해 성장하는 생명체입니다. 같은 달생이는 세상에 하나도
-            없습니다.
+            달생이는 플레이어와의 대화를 통해 성장하는 생명체입니다. 어떤 말을 건네느냐에 따라
+            성격도, 생김새도, 미래도 달라집니다.
           </p>
           <ul className="mt-5 space-y-2">
             {traits.map((t) => (
@@ -195,7 +195,7 @@ const CharacterSection = () => {
         >
           <div className="flex items-center gap-3">
             <p className="text-[10px] tracking-[0.25em] uppercase text-ivory/30">종족 선택</p>
-            <p className="text-[10px] text-periwinkle/40 font-serif">아직 만나지 못한 더 많은 달생이들이 당신을 기다리고 있습니다.</p>
+            <p className="text-xs text-periwinkle/60 font-serif">아직 만나지 못한 더 많은 달생이들이 당신을 기다리고 있습니다.</p>
           </div>
 
           <div className="flex flex-wrap gap-2">
@@ -300,7 +300,7 @@ const CharacterSection = () => {
             </AnimatePresence>
           </div>
 
-          <p className="text-xs text-ivory/35 font-serif">
+          <p className="text-sm text-ivory/55 font-serif">
             동일한 성장 구조 위에서, 플레이어의 대화와 선택이 쌓여 매번 전혀 다른 달생이의 인생이
             만들어집니다.
           </p>

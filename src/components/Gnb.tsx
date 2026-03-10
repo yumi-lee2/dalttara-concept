@@ -8,7 +8,6 @@ const sections = [
   { id: "character", label: "달생이" },
   { id: "core-gameplay", label: "게임플레이" },
   { id: "core-loop", label: "코어 루프" },
-  { id: "value-system", label: "가치 시스템" },
   { id: "differentiation", label: "차별화" },
   { id: "target", label: "타겟" },
 ];
@@ -35,18 +34,19 @@ const Gnb = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-30 border-b border-ivory/5 bg-space-900/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-5 py-3.5">
-        <a href="#top" className="flex items-center">
+      <div className="mx-auto flex max-w-5xl items-center justify-between pr-5 py-3.5">
+        <a href="#top" className="flex items-center gap-2">
           <img
             src={star02}
-            alt="달따라"
-            className="h-7 w-auto object-contain"
+            alt=""
+            aria-hidden
+            className="h-6 w-auto object-contain"
           />
         </a>
 
-        {/* 모바일: 일부 항목만 */}
-        <nav className="flex gap-4 text-[11px] text-ivory/40 md:hidden">
-          {sections.slice(0, 5).map((s) => (
+        {/* 모바일: 전체 항목 가로 스크롤 */}
+        <nav className="flex gap-4 text-[11px] text-ivory/40 md:hidden overflow-x-auto scrollbar-none">
+          {sections.map((s) => (
             <a
               key={s.id}
               href={`#${s.id}`}

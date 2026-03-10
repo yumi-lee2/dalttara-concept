@@ -1,30 +1,36 @@
 import { motion } from "framer-motion";
 
-const star01 = "/assets/artifacts/star01.png";
-const star03 = "/assets/artifacts/star03.png";
-const sparkle3 = "/assets/artifacts/sparkle3.png";
+const assetBase = import.meta.env.BASE_URL || "/";
+const star01 = `${assetBase}assets/artifacts/star01.png`;
+const star03 = `${assetBase}assets/artifacts/star03.png`;
+const sparkle3 = `${assetBase}assets/artifacts/sparkle3.png`;
 
-const steps = [
-  "알 선택",
-  "달생이 부화",
-  "대화 및 상호작용",
-  "성향 형성",
-  "이벤트 발생",
-  "성장 및 가치 축적",
-  "직업 획득",
-  "지구로 떠남",
-  "새로운 달생이 시작",
+const stages = [
+  {
+    label: "만남",
+    sub: "알 선택 · 달생이 부화",
+    desc: "처음 만나는 순간, 아직 아무것도 결정되지 않은 달생이가 당신 앞에 나타납니다.",
+    color: "border-moonmint/30 bg-moonmint/[0.06]",
+    labelColor: "text-moonmint/80",
+    numColor: "text-moonmint/20",
+  },
+  {
+    label: "성장",
+    sub: "대화 · 성향 형성 · 이벤트 · 직업 획득",
+    desc: "당신이 건네는 말 한마디가 달생이의 오늘을 만듭니다.",
+    color: "border-periwinkle/30 bg-periwinkle/[0.06]",
+    labelColor: "text-periwinkle/80",
+    numColor: "text-periwinkle/20",
+  },
+  {
+    label: "이별과 새 시작",
+    sub: "지구로 떠남 · 새로운 달생이",
+    desc: "10살이 되면, 달생이는 지구로 떠납니다. 그리고 새로운 알이 당신을 기다립니다.",
+    color: "border-star/30 bg-star/[0.04]",
+    labelColor: "text-star/80",
+    numColor: "text-star/20",
+  },
 ];
-
-const containerVariants = {
-  hidden: {},
-  show: { transition: { staggerChildren: 0.05, delayChildren: 0.05 } },
-};
-
-const itemVariants = {
-  hidden: { opacity: 0, y: 8 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.35, ease: [0.22, 1, 0.36, 1] as const } },
-};
 
 const CoreLoopSection = () => {
   return (
@@ -59,7 +65,7 @@ const CoreLoopSection = () => {
       <div className="max-w-6xl mx-auto space-y-12">
         {/* Header */}
         <motion.div
-          className="space-y-4 max-w-2xl"
+          className="space-y-4 max-w-5xl"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -67,55 +73,40 @@ const CoreLoopSection = () => {
         >
           <p className="text-[11px] tracking-[0.3em] uppercase text-periwinkle">Core Loop</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ivory leading-tight">
-            한 달생이의 이야기 루프
+            만남, 성장, 그리고 이별
           </h2>
           <p className="text-ivory/60 leading-relaxed">
-            달따라의 플레이는 하나의 알에서 시작해, 지구로 떠나는 엔딩을 거쳐 새로운 알로 이어지는
-            반복 가능한 이야기 구조를 가지고 있습니다.
+            달생이와의 시간은 언제나 세 개의 장으로 이루어집니다.
+            그리고 이별 후엔 반드시 새로운 만남이 찾아옵니다.
           </p>
         </motion.div>
 
-        {/* Inline flow */}
-        <motion.div
-          className="flex flex-wrap items-center gap-y-3"
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          {steps.map((step, i) => (
-            <motion.div key={step} variants={itemVariants} className="flex items-center">
-              {/* Step chip */}
-              <div className={`flex items-center gap-2 px-3.5 py-2 rounded-full border transition-colors ${
-                i === 0
-                  ? "border-periwinkle/40 bg-periwinkle/10"
-                  : "border-ivory/[0.08] bg-ivory/[0.02]"
-              }`}>
-                <span className={`text-[10px] tabular-nums font-sans leading-none ${
-                  i === 0 ? "text-periwinkle/80" : "text-ivory/30"
-                }`}>
+        {/* 3-stage cards */}
+        <div className="grid md:grid-cols-3 gap-4 md:gap-6">
+          {stages.map((stage, i) => (
+            <motion.div
+              key={stage.label}
+              initial={{ opacity: 0, y: 16 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
+              className={`p-6 rounded-2xl border flex flex-col gap-4 ${stage.color}`}
+            >
+              <div className="flex items-start justify-between">
+                <span className={`text-lg font-serif font-medium ${stage.labelColor}`}>
+                  {stage.label}
+                </span>
+                <span className={`text-4xl font-bold font-sans leading-none ${stage.numColor}`}>
                   {String(i + 1).padStart(2, "0")}
                 </span>
-                <span className={`text-sm leading-none ${
-                  i === 0 ? "text-periwinkle/90" : "text-ivory/65"
-                }`}>
-                  {step}
-                </span>
               </div>
-
-              {/* Arrow */}
-              {i < steps.length - 1 && (
-                <span className="text-ivory/15 text-xs mx-2 shrink-0">→</span>
-              )}
+              <p className="text-[11px] tracking-wide text-ivory/35 uppercase">{stage.sub}</p>
+              <p className="text-sm text-ivory/60 leading-relaxed whitespace-pre-line">
+                {stage.desc}
+              </p>
             </motion.div>
           ))}
-
-        </motion.div>
-
-        <p className="text-xs md:text-sm text-ivory/35 max-w-3xl">
-          한 달생이의 이야기가 지구에서 끝나면, 플레이어는 새로운 알을 만나 전혀 다른 성향과 이야기를
-          가진 달생이를 키우며 루프를 다시 시작합니다.
-        </p>
+        </div>
       </div>
     </section>
   );

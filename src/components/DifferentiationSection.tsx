@@ -1,8 +1,9 @@
 import { motion } from "framer-motion";
 
-const star01 = "/assets/artifacts/star01.png";
-const sparkle1 = "/assets/artifacts/sparkle1.png";
-const sparkle4 = "/assets/artifacts/sparkle4.png";
+const assetBase = import.meta.env.BASE_URL || "/";
+const star01 = `${assetBase}assets/artifacts/star01.png`;
+const sparkle1 = `${assetBase}assets/artifacts/sparkle1.png`;
+const sparkle4 = `${assetBase}assets/artifacts/sparkle4.png`;
 
 const diffs = [
   {
@@ -14,17 +15,10 @@ const diffs = [
   },
   {
     number: "02",
-    title: "감정 기반 서사형 육성",
-    bold: "다마고치처럼 돌보되\n감정과 이야기가 축적",
-    desc: "매일의 대화가 이어져 하나의 긴 이야기를 만들어 냅니다. 감정적 교감이 게임의 핵심입니다.",
+    title: "대화가 재화가 되는 구조",
+    bold: "이야기 그 자체가\n소유하고 거래할 수 있는 자산",
+    desc: "달생이와 나눈 대화 기록은 고유한 NFT로 발행될 수 있습니다. 플레이어가 만든 이야기 자체가 소유하고 거래할 수 있는 자산입니다.",
     numColor: "text-periwinkle/20",
-  },
-  {
-    number: "03",
-    title: "대화가 자산이 되는 구조",
-    bold: "이야기 그 자체가\n가치 데이터",
-    desc: "달생이와 나눈 대화는 성장 기록이자 디지털 자산으로 확장할 수 있는 고유한 데이터입니다.",
-    numColor: "text-star/20",
   },
 ];
 
@@ -35,7 +29,7 @@ const DifferentiationSection = () => {
       className="px-6 md:px-10 py-28 relative overflow-hidden bg-space-800/40"
     >
       <span className="absolute top-10 right-6 md:right-14 text-[8rem] md:text-[11rem] font-bold text-periwinkle/5 select-none leading-none pointer-events-none font-sans">
-        06
+        05
       </span>
 
       {/* Artifacts */}
@@ -66,7 +60,7 @@ const DifferentiationSection = () => {
 
       <div className="max-w-6xl mx-auto space-y-12">
         <motion.div
-          className="space-y-4 max-w-2xl"
+          className="space-y-4 max-w-5xl"
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
@@ -76,7 +70,7 @@ const DifferentiationSection = () => {
             Key Differentiation
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ivory leading-tight">
-            다른 육성 게임과의 차이
+            달따라만이 할 수 있는 것
           </h2>
           <p className="text-ivory/55 leading-relaxed">
             단순한 수치 성장이나 확률 뽑기가 아니라, 플레이어의 말과 감정이 직접 캐릭터를 만드는
@@ -112,6 +106,7 @@ const DifferentiationSection = () => {
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

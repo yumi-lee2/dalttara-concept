@@ -12,7 +12,7 @@ const sparkle2 = `${assetBase}assets/artifacts/sparkle2.png`;
 const sparkle3 = `${assetBase}assets/artifacts/sparkle3.png`;
 const sparkle6 = `${assetBase}assets/artifacts/sparkle6.png`;
 
-const tags = ["AI 대화 기반 성장", "10년 성장 사이클", "대화 = 가치 데이터"];
+const tags = ["AI 대화 기반 성장", "10년 성장 사이클", "세상에 단 하나뿐인 달생이"];
 
 const Hero = () => {
   return (
@@ -113,10 +113,10 @@ const Hero = () => {
             달따라
           </h1>
 
-          <p className="text-ivory/55 leading-relaxed max-w-[22rem]">
-            AI 대화로 성격과 직업이 결정되는,
+          <p className="text-ivory/65 leading-relaxed max-w-[22rem]">
+            오늘 건넨 한마디가 달생이의 성격을 만듭니다.
             <br />
-            단 한 번뿐인 달생이의 성장 서사형 육성 게임.
+            같은 달생이는 세상에 단 하나도 없습니다.
           </p>
 
           <div className="flex flex-wrap gap-2 pt-1">
@@ -129,6 +129,7 @@ const Hero = () => {
               </span>
             ))}
           </div>
+          {/* Scroll indicator */}
         </motion.div>
 
         {/* Illustration side */}

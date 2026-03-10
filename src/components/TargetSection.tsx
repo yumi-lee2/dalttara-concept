@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
 
-const star01 = "/assets/artifacts/star01.png";
-const star02 = "/assets/artifacts/star02.png";
-const star03 = "/assets/artifacts/star03.png";
-const sparkle1 = "/assets/artifacts/sparkle1.png";
-const sparkle2 = "/assets/artifacts/sparkle2.png";
-const sparkle3 = "/assets/artifacts/sparkle3.png";
-const sparkle5 = "/assets/artifacts/sparkle5.png";
-const sparkle6 = "/assets/artifacts/sparkle6.png";
+const assetBase = import.meta.env.BASE_URL || "/";
+const star01 = `${assetBase}assets/artifacts/star01.png`;
+const star02 = `${assetBase}assets/artifacts/star02.png`;
+const star03 = `${assetBase}assets/artifacts/star03.png`;
+const sparkle1 = `${assetBase}assets/artifacts/sparkle1.png`;
+const sparkle2 = `${assetBase}assets/artifacts/sparkle2.png`;
+const sparkle3 = `${assetBase}assets/artifacts/sparkle3.png`;
+const sparkle5 = `${assetBase}assets/artifacts/sparkle5.png`;
+const sparkle6 = `${assetBase}assets/artifacts/sparkle6.png`;
 
 const targets = [
   "감정적 교감을 중심으로 한 육성 게임을 좋아하는 유저",
@@ -19,7 +20,7 @@ const TargetSection = () => {
   return (
     <section
       id="target"
-      className="px-6 md:px-10 py-32 md:py-44 relative overflow-hidden"
+      className="px-6 md:px-10 py-28 relative overflow-hidden"
     >
       {/* Ambient center glow */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
@@ -146,7 +147,7 @@ const TargetSection = () => {
           <p className="font-serif text-2xl md:text-3xl lg:text-4xl text-ivory leading-snug">
             "저 달생이… 어디서 키워?"
           </p>
-          <p className="text-ivory/45 text-sm md:text-base max-w-sm mx-auto leading-relaxed">
+          <p className="text-ivory/45 text-sm md:text-base max-w-md mx-auto leading-relaxed">
             언젠가 누군가에게 이렇게 묻고 싶은, 나만의 달생이를 키우는 경험.
           </p>
         </motion.div>

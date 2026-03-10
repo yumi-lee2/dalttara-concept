@@ -1,21 +1,19 @@
 import { motion } from "framer-motion";
 
-const star02 = "/assets/artifacts/star02.png";
-const sparkle5 = "/assets/artifacts/sparkle5.png";
-const sparkle7 = "/assets/artifacts/sparkle7.png";
+const assetBase = import.meta.env.BASE_URL || "/";
+const star02 = `${assetBase}assets/artifacts/star02.png`;
+const sparkle5 = `${assetBase}assets/artifacts/sparkle5.png`;
+const sparkle7 = `${assetBase}assets/artifacts/sparkle7.png`;
 
 const worldPoints = [
   {
     title: "지구를 꿈꾸는 작은 세계",
-    desc: "달의 뒷면, 언젠가 지구에 가기를 꿈꾸는 작은 생명체들이 사는 곳입니다.",
   },
   {
     title: "단 하나의 조건, 직업",
-    desc: "지구에 발을 디디기 위해 충족해야 할 조건은 오직 하나 — 직업을 갖는 것입니다.",
   },
   {
     title: "대화로 성장하는 육성 기관",
-    desc: "달의 뒷면에는 달생이들이 대화를 통해 배우고 성장하며 자신만의 정체성을 만들어가는 특별한 육성 기관이 있습니다.",
   },
 ];
 
@@ -82,9 +80,9 @@ const WorldSection = () => {
           작은 생명체들의 세계
         </motion.h2>
 
-        <div className="mt-16 grid md:grid-cols-2 gap-12 md:gap-20">
+        <div className="mt-12 grid md:grid-cols-3 gap-12 md:gap-20">
           {/* Left: prose */}
-          <motion.div className="space-y-5" {...fadeUp(0.18)}>
+          <motion.div className="space-y-5 md:col-span-2" {...fadeUp(0.18)}>
             <p className="text-ivory/70 leading-relaxed text-base md:text-lg">
               달의 뒷면에는 태어날 때부터{" "}
               <span className="text-ivory font-medium">지구를 동경하는 생명체들</span>이 살고
@@ -96,8 +94,7 @@ const WorldSection = () => {
             </p>
             <p className="text-ivory/55 leading-relaxed">
               달의 뒷면에는 이를 돕기 위한 육성 기관이 존재하며, 달생이들은 대화를 통해 배우고
-              성장하며 자신만의 정체성을 만들어 갑니다. 직업을 얻은 달생이는 지구로 떠납니다.
-              그것이 이 게임의 하나의 엔딩입니다.
+              성장하며 자신만의 정체성을 만들어 갑니다. 직업을 얻은 달생이는 지구로 향합니다.
             </p>
           </motion.div>
 
@@ -113,7 +110,6 @@ const WorldSection = () => {
                 </div>
                 <div className={i < worldPoints.length - 1 ? "pb-7" : ""}>
                   <p className="text-sm font-medium text-ivory/85">{item.title}</p>
-                  <p className="mt-1.5 text-sm text-ivory/50 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
