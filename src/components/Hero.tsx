@@ -94,7 +94,7 @@ const Hero = () => {
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-20 md:pt-0">
+      <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-20">
         {/* Text side */}
         <motion.div
           className="space-y-8"

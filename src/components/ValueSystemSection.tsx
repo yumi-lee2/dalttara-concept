@@ -98,11 +98,6 @@ const ValueSystemSection = () => {
             </div>
           </div>
         </motion.div>
-
-        <p className="text-xs md:text-sm text-ivory/35 max-w-3xl">
-          우리는 플레이 시간이나 과금 이력이 아니라, 플레이어와 캐릭터가 함께 만든 이야기 그 자체에
-          가치를 부여합니다.
-        </p>
       </div>
     </section>
   );
