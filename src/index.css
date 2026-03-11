@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Noto+Sans+KR:wght@300;400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
 
 @tailwind base;
 @tailwind components;
@@ -12,7 +13,7 @@ html {
 body {
   background-color: #090e24;
   color: #ede8df;
-  font-family: "Noto Sans KR", system-ui, sans-serif;
+  font-family: "Pretendard", "Noto Sans KR", system-ui, sans-serif;
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

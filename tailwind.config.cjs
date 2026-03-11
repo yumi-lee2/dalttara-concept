@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         serif: ["'Gowun Dodum'", "system-ui", "sans-serif"],
-        sans: ["'Noto Sans KR'", "system-ui", "sans-serif"],
+        sans: ["'Pretendard'", "'Noto Sans KR'", "system-ui", "sans-serif"],
       },
       colors: {
         space: {

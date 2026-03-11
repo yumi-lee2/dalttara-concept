@@ -111,7 +111,7 @@ const TargetSection = () => {
         transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="max-w-3xl mx-auto text-center space-y-16 relative">
+      <div className="max-w-3xl mx-auto text-center space-y-20 relative">
         {/* Audience */}
         <motion.div
           className="space-y-7"
@@ -126,14 +126,13 @@ const TargetSection = () => {
           <h2 className="font-serif text-3xl md:text-4xl text-ivory leading-tight">
             이런 플레이어라면 딱이에요!
           </h2>
-          <ul className="space-y-2.5 text-ivory/55 text-sm md:text-base">
+          <div className="flex flex-col items-center gap-3">
             {targets.map((t) => (
-              <li key={t} className="flex items-center justify-center gap-2.5">
-                <span className="text-periwinkle/40 text-xs leading-none">◦</span>
+              <div key={t} className="w-full max-w-sm rounded-xl bg-white/[0.04] backdrop-blur-md py-3 px-4 text-center text-ivory/55 text-sm md:text-base">
                 {t}
-              </li>
+              </div>
             ))}
-          </ul>
+          </div>
         </motion.div>
 
         {/* Closing quote */}
@@ -152,6 +151,16 @@ const TargetSection = () => {
             <br />
             지금 달따라를 경험해보세요.
           </p>
+          <motion.div className="pt-10 flex justify-center">
+            <motion.img
+              src={star02}
+              alt=""
+              aria-hidden
+              className="w-10 md:w-12 object-contain"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+            />
+          </motion.div>
         </motion.div>
       </div>
     </section>

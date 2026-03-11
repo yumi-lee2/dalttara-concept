@@ -10,25 +10,28 @@ const stages = [
     label: "만남",
     sub: "알 선택 · 달생이 부화",
     desc: "처음 만나는 순간, 아직 아무것도 결정되지 않은 달생이가 당신 앞에 나타납니다.",
-    color: "border-moonmint/30 bg-moonmint/[0.06]",
-    labelColor: "text-moonmint/80",
-    numColor: "text-moonmint/20",
+    color: "border-ivory/[0.08] bg-white/[0.03] backdrop-blur-md",
+    gradient: "linear-gradient(135deg, rgba(255,240,150,0.08), transparent 60%)",
+    labelColor: "text-[#fff0a0]",
+    numColor: "text-[#fff0a0]/15",
   },
   {
     label: "성장",
     sub: "대화 · 성향 형성 · 이벤트 · 직업 획득",
     desc: "당신이 건네는 말 한마디가 달생이의 오늘을 만듭니다.",
-    color: "border-periwinkle/30 bg-periwinkle/[0.06]",
-    labelColor: "text-periwinkle/80",
-    numColor: "text-periwinkle/20",
+    color: "border-ivory/[0.08] bg-white/[0.03] backdrop-blur-md",
+    gradient: "linear-gradient(135deg, rgba(150,230,170,0.08), transparent 60%)",
+    labelColor: "text-[#a0e8b0]",
+    numColor: "text-[#a0e8b0]/15",
   },
   {
     label: "이별과 새 시작",
     sub: "지구로 떠남 · 새로운 달생이",
     desc: "10살이 되면, 달생이는 지구로 떠납니다. 그리고 새로운 알이 당신을 기다립니다.",
-    color: "border-star/30 bg-star/[0.04]",
-    labelColor: "text-star/80",
-    numColor: "text-star/20",
+    color: "border-ivory/[0.08] bg-white/[0.03] backdrop-blur-md",
+    gradient: "linear-gradient(135deg, rgba(255,180,200,0.08), transparent 60%)",
+    labelColor: "text-[#ffb4c8]",
+    numColor: "text-[#ffb4c8]/15",
   },
 ];
 
@@ -91,6 +94,7 @@ const CoreLoopSection = () => {
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.6, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
               className={`p-6 rounded-2xl border flex flex-col gap-4 ${stage.color}`}
+              style={{ backgroundImage: stage.gradient }}
             >
               <div className="flex items-start justify-between">
                 <span className={`text-lg font-serif font-medium ${stage.labelColor}`}>

@@ -107,7 +107,7 @@ const Hero = () => {
           </p>
 
           <h1
-            className="text-ivory leading-[0.92] tracking-tight text-[clamp(3.6rem,10.8vw,5.85rem)] font-black"
+            className="text-ivory leading-[0.92] tracking-[0.05em] text-[clamp(3.6rem,10.8vw,5.85rem)] font-black"
             style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
           >
             달따라

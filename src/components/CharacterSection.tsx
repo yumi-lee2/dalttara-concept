@@ -185,7 +185,8 @@ const CharacterSection = () => {
           </ul>
         </motion.div>
 
-        {/* Race selector */}
+        {/* Race selector + Growth – glass card */}
+        <div className="rounded-3xl border border-ivory/[0.08] bg-white/[0.03] backdrop-blur-md px-6 pt-7 pb-3 md:px-10 md:pt-11 md:pb-5 space-y-16">
         <motion.div
           className="space-y-5"
           initial={{ opacity: 0, y: 16 }}
@@ -193,12 +194,12 @@ const CharacterSection = () => {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div className="flex items-center gap-3">
-            <p className="text-[10px] tracking-[0.25em] uppercase text-ivory/30 flex-shrink-0">종족 선택</p>
+          <div className="flex items-center gap-3 justify-center">
+            <p className="text-[10px] tracking-[0] uppercase text-ivory/30 flex-shrink-0">종족 선택</p>
             <p className="text-xs text-periwinkle/60 font-serif">아직 만나지 못한 더 많은 달생이들이 당신을 기다리고 있습니다.</p>
           </div>
 
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 justify-center">
             {raceCards.map((race) => (
               <button
                 key={race.key}
@@ -216,13 +217,11 @@ const CharacterSection = () => {
               </button>
             ))}
 
-            {[28, 22, 32].map((w, n) => (
-              <span
-                key={`mystery-${n}`}
-                style={{ width: `${w * 4}px` }}
-                className="h-[42px] rounded-full bg-ivory/[0.04] border border-ivory/[0.06] animate-pulse cursor-not-allowed select-none"
-              />
-            ))}
+            <span
+              className="h-[42px] px-4 rounded-full bg-ivory/[0.04] border border-ivory/[0.06] animate-pulse cursor-not-allowed select-none flex items-center justify-center text-[11px] text-ivory/30"
+            >
+              더 다양한 종족 준비중
+            </span>
           </div>
 
           <AnimatePresence mode="wait">
@@ -232,7 +231,7 @@ const CharacterSection = () => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.22 }}
-              className="text-sm text-ivory/40 font-serif"
+              className="text-sm text-ivory/70 font-serif text-center"
             >
               {selectedCard.desc}
             </motion.p>
@@ -247,14 +246,18 @@ const CharacterSection = () => {
           viewport={{ once: true, amount: 0.25 }}
           transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
         >
-          <div>
+          <div className="text-center">
             <p className="text-[11px] tracking-[0.3em] uppercase text-periwinkle">Growth</p>
             <h3 className="mt-2 font-serif text-xl md:text-2xl text-ivory">
               {selectedRace}의 10년 성장 사이클
             </h3>
+            <p className="mt-3 text-sm text-ivory/55 font-serif">
+              동일한 성장 구조지만, 플레이어의 대화와 순간의 선택이 쌓여 전혀 다른 달생이가
+              탄생합니다. 물론 달생이의 삶도 다 달라요.
+            </p>
           </div>
 
-          <div className="relative">
+          <div className="relative mt-24">
             {/* Dashed connector line – centered on boxes, behind cards */}
             <div className="hidden md:block absolute top-[74px] left-[12.5%] right-[12.5%] border-t border-dashed border-periwinkle/20 pointer-events-none z-0" />
 
@@ -282,7 +285,7 @@ const CharacterSection = () => {
                       <img
                         src={g.image}
                         alt={`${selectedRace} ${g.stage}`}
-                        className={`w-full h-full object-contain ${g.stage === "알" ? "p-6" : "p-3"}`}
+                        className={`w-full h-full object-contain ${g.stage === "알" ? "p-6" : g.stage === "자아 형성기" && selectedRace === "포포" ? "p-5" : "p-3"}`}
                       />
                     </motion.div>
 
@@ -300,11 +303,9 @@ const CharacterSection = () => {
             </AnimatePresence>
           </div>
 
-          <p className="text-sm text-ivory/55 font-serif">
-            동일한 성장 구조지만, 플레이어의 대화와 순간의 선택이 쌓여 전혀 다른 달생이가
-            탄생합니다. 물론 달생이의 삶도 다 달라요.
-          </p>
         </motion.div>
+        <div className="h-[3px]" />
+        </div>
 
       </div>
     </section>
