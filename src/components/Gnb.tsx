@@ -45,7 +45,7 @@ const Gnb = () => {
         </a>
 
         {/* 모바일: 전체 항목 가로 스크롤 */}
-        <nav className="flex gap-4 text-[11px] text-ivory/40 md:hidden overflow-x-auto scrollbar-none">
+        <nav className="flex gap-4 text-[12px] text-ivory/40 md:hidden overflow-x-auto scrollbar-none">
           {sections.map((s) => (
             <a
               key={s.id}
@@ -60,7 +60,7 @@ const Gnb = () => {
         </nav>
 
         {/* 데스크톱: 전체 항목 */}
-        <nav className="hidden md:flex gap-6 text-[12px] text-ivory/40">
+        <nav className="hidden md:flex gap-6 text-[13px] text-ivory/40">
           {sections.map((s) => (
             <a
               key={s.id}

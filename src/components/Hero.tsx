@@ -12,7 +12,7 @@ const sparkle2 = `${assetBase}assets/artifacts/sparkle2.png`;
 const sparkle3 = `${assetBase}assets/artifacts/sparkle3.png`;
 const sparkle6 = `${assetBase}assets/artifacts/sparkle6.png`;
 
-const tags = ["AI 대화 기반 성장", "10년 성장 사이클", "세상에 단 하나뿐인 달생이"];
+const tags = ["AI 대화 기반 성장 게임", "10년 성장 사이클", "세상에 단 하나뿐인 달생이"];
 
 const Hero = () => {
   return (
@@ -103,17 +103,17 @@ const Hero = () => {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="font-serif text-sm text-periwinkle/75 leading-none">
-            달의 뒷면엔 어떤 생명이 있을까?
+            달의 뒷면엔 어떤 생명체가 있을까?
           </p>
 
           <h1
-            className="text-ivory leading-[0.92] tracking-tight text-[clamp(4rem,12vw,6.5rem)] font-black"
+            className="text-ivory leading-[0.92] tracking-tight text-[clamp(3.6rem,10.8vw,5.85rem)] font-black"
             style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
           >
             달따라
           </h1>
 
-          <p className="text-ivory/65 leading-relaxed max-w-[22rem]">
+          <p className="text-ivory/65 text-lg leading-relaxed max-w-[22rem]">
             오늘 건넨 한마디가 달생이의 성향과 외형으로!
             <br />
             이 세상에 같은 달생이는 단 한 명도 없어요.
@@ -123,7 +123,7 @@ const Hero = () => {
             {tags.map((tag) => (
               <span
                 key={tag}
-                className="text-[11px] text-ivory/45 border border-ivory/10 rounded-full px-3 py-1"
+                className="text-[12.5px] text-ivory/45 border border-ivory/25 rounded-full px-3 py-1"
               >
                 {tag}
               </span>
