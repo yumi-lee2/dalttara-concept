@@ -73,11 +73,11 @@ const CoreLoopSection = () => {
         >
           <p className="text-[11px] tracking-[0.3em] uppercase text-periwinkle">Core Loop</p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ivory leading-tight">
-            만남, 성장, 그리고 이별
+            만남, 성장 그리고 이별
           </h2>
           <p className="text-ivory/60 leading-relaxed">
-            달생이와의 시간은 언제나 세 개의 장으로 이루어집니다.
-            그리고 이별 후엔 반드시 새로운 만남이 찾아옵니다.
+            달생이와의 시간은 총 3개의 장으로 이루어져 있어요.
+            결국엔 이별이 오지만, 이후엔 새로운 만남이 찾아옵니다.
           </p>
         </motion.div>
 

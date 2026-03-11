@@ -10,14 +10,14 @@ const diffs = [
     number: "01",
     title: "대화가 만드는 캐릭터",
     bold: "확률이 아닌\n플레이어의 말 한마디",
-    desc: "어떤 선택지를 골랐는지가 아니라, 어떤 말을 건넸는지가 달생이의 성향을 결정합니다.",
+    desc: "어떤 선택지를 고르기 보단 어떤 말을 건넸는지에 따라 달생이의 성향이 결정돼요.",
     numColor: "text-moonmint/20",
   },
   {
     number: "02",
     title: "대화가 재화가 되는 구조",
     bold: "이야기 그 자체가\n소유하고 거래할 수 있는 자산",
-    desc: "달생이와 나눈 대화 기록은 고유한 NFT로 발행될 수 있습니다. 플레이어가 만든 이야기 자체가 소유하고 거래할 수 있는 자산입니다.",
+    desc: "대화 기록이 곧 고유한 NFT, 플레이어가 만든 이야기 자체가 소유하고 거래할 수 있는 자산이 됩니다.",
     numColor: "text-periwinkle/20",
   },
 ];
@@ -70,11 +70,11 @@ const DifferentiationSection = () => {
             Key Differentiation
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ivory leading-tight">
-            달따라만이 할 수 있는 것
+            '달따라'만이 할 수 있는 것
           </h2>
           <p className="text-ivory/55 leading-relaxed">
-            단순한 수치 성장이나 확률 뽑기가 아니라, 플레이어의 말과 감정이 직접 캐릭터를 만드는
-            구조에 집중합니다.
+            단순히 수치 성장, 확률 뽑기를 하는 것이 아닌 플레이어와의 대화가 직접 캐릭터를
+            만들어요.
           </p>
         </motion.div>
 

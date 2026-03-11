@@ -124,7 +124,7 @@ const TargetSection = () => {
             Target Audience
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-ivory leading-tight">
-            이런 플레이어를 위한 게임입니다
+            이런 플레이어라면 딱이에요!
           </h2>
           <ul className="space-y-2.5 text-ivory/55 text-sm md:text-base">
             {targets.map((t) => (
@@ -148,7 +148,9 @@ const TargetSection = () => {
             "저 달생이… 어디서 키워?"
           </p>
           <p className="text-ivory/45 text-sm md:text-base max-w-md mx-auto leading-relaxed">
-            언젠가 누군가에게 이렇게 묻고 싶은, 나만의 달생이를 키우는 경험.
+            언젠가 모두가 이렇게 질문하고 있을거에요.
+            <br />
+            지금 달따라를 경험해보세요.
           </p>
         </motion.div>
       </div>
