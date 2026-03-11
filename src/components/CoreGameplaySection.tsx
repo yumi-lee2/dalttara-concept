@@ -36,7 +36,7 @@ const CoreGameplaySection = () => {
         src={star02}
         alt=""
         aria-hidden
-        className="absolute top-12 left-6 w-11 pointer-events-none select-none"
+        className="absolute top-12 left-6 w-11 pointer-events-none select-none opacity-60"
         animate={{ y: [0, -9, 0], rotate: [0, 7, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />

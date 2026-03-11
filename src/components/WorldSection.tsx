@@ -37,7 +37,7 @@ const WorldSection = () => {
         src={star02}
         alt=""
         aria-hidden
-        className="absolute top-6 right-10 md:right-48 w-12 md:w-16 pointer-events-none select-none"
+        className="absolute top-6 right-10 md:right-48 w-12 md:w-16 pointer-events-none select-none opacity-60"
         animate={{ y: [0, -8, 0], rotate: [0, 6, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />

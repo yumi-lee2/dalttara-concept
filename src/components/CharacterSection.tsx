@@ -127,7 +127,7 @@ const CharacterSection = () => {
         src={star01}
         alt=""
         aria-hidden
-        className="absolute top-14 right-8 md:right-52 w-10 md:w-12 pointer-events-none select-none"
+        className="absolute top-14 -z-2 right-8 md:right-52 w-10 md:w-12 pointer-events-none select-none opacity-40"
         animate={{ y: [0, -8, 0], rotate: [0, -8, 0] }}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
       />
@@ -135,7 +135,7 @@ const CharacterSection = () => {
         src={star03}
         alt=""
         aria-hidden
-        className="absolute bottom-12 left-4 w-10 pointer-events-none select-none"
+        className="absolute bottom-12 left-4 w-10 pointer-events-none select-none opacity-40"
         animate={{ y: [0, -6, 0], rotate: [0, 6, 0] }}
         transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
@@ -143,7 +143,7 @@ const CharacterSection = () => {
         src={sparkle2}
         alt=""
         aria-hidden
-        className="absolute bottom-20 right-6 w-14 md:w-16 pointer-events-none select-none"
+        className="absolute bottom-20 right-6 w-14 md:w-16 pointer-events-none select-none opacity-50"
         animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.85, 1.1, 0.85] }}
         transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
       />
@@ -270,35 +270,37 @@ const CharacterSection = () => {
                 transition={{ duration: 0.28 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5"
               >
-                {growth.map((g, i) => (
-                  <motion.div
-                    key={g.stage}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.38, delay: i * 0.07 }}
-                    className="flex flex-col items-center gap-3 text-center relative"
-                  >
+                {growth.map((g, i) => {
+                  const stepSizes = ["w-[60px]", "w-[90px]", "w-[100px]", "w-[140px]"];
+                  return (
                     <motion.div
-                      className="w-full aspect-square max-w-[148px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70 relative z-10 cursor-pointer"
-                      whileHover={{ y: [0, -6, 0], transition: { duration: 0.8, repeat: Infinity, ease: "easeInOut" } }}
+                      key={g.stage}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.38, delay: i * 0.07 }}
+                      className="flex flex-col items-center gap-3 text-center relative"
                     >
-                      <img
-                        src={g.image}
-                        alt={`${selectedRace} ${g.stage}`}
-                        className={`w-full h-full object-contain ${g.stage === "알" ? "p-6" : g.stage === "자아 형성기" && selectedRace === "포포" ? "p-5" : "p-3"}`}
-                      />
+                      <motion.div
+                        className="w-full aspect-square max-w-[160px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70 flex items-end justify-center pb-4 relative z-10 cursor-pointer"
+                        whileHover={{ y: [0, -6, 0], transition: { duration: 0.8, repeat: Infinity, ease: "easeInOut" } }}
+                      >
+                        <img
+                          src={g.image}
+                          alt={`${selectedRace} ${g.stage}`}
+                          className={`${stepSizes[i]} h-auto object-contain transition-all duration-300`}
+                        />
+                      </motion.div>
+
+                      <div>
+                        <p className="text-[10px] text-ivory/35">{g.age}</p>
+                        <p className="text-sm font-medium text-ivory/80">{g.stage}</p>
+                        <p className="mt-1 text-xs text-ivory/40 leading-relaxed hidden md:block text-balance">
+                          {g.body}
+                        </p>
+                      </div>
                     </motion.div>
-
-
-                    <div>
-                      <p className="text-[10px] text-ivory/35">{g.age}</p>
-                      <p className="text-sm font-medium text-ivory/80">{g.stage}</p>
-                      <p className="mt-1 text-xs text-ivory/40 leading-relaxed hidden md:block">
-                        {g.body}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
+                  );
+                })}
               </motion.div>
             </AnimatePresence>
           </div>
