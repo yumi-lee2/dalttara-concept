@@ -267,35 +267,44 @@ const CharacterSection = () => {
                 transition={{ duration: 0.28 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5"
               >
-                {growth.map((g, i) => (
-                  <motion.div
-                    key={g.stage}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.38, delay: i * 0.07 }}
-                    className="flex flex-col items-center gap-3 text-center"
-                  >
-                    {/* Timeline dot */}
-                    <div className="relative w-full flex justify-center">
-                      <div className="w-2 h-2 rounded-full bg-periwinkle/35 z-10" />
-                    </div>
+               {growth.map((g, i) => {
+  // 단계별 크기 배열 (알 -> 졸업 순서)
+  const stepSizes = ["w-[60px]", "w-[90px]", "w-[100px]", "w-[140px]"];
 
-                    <div className="w-full aspect-square max-w-[148px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70">
-                      <img
-                        src={g.image}
-                        alt={`${selectedRace} ${g.stage}`}
-                        className="w-full h-full object-contain p-3"
-                      />
-                    </div>
-                    <div>
-                      <p className="text-[10px] text-ivory/35">{g.age}</p>
-                      <p className="text-sm font-medium text-ivory/80">{g.stage}</p>
-                      <p className="mt-1 text-xs text-ivory/40 leading-relaxed hidden md:block">
-                        {g.body}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
+  return (
+    <motion.div
+      key={g.stage}
+      initial={{ opacity: 0, y: 12 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.38, delay: i * 0.07 }}
+      className="flex flex-col items-center gap-3 text-center"
+    >
+      {/* 타임라인 점 (기존 코드 유지) */}
+      <div className="relative w-full flex justify-center">
+        <div className="w-2 h-2 rounded-full bg-periwinkle/35 z-10" />
+      </div>
+
+      {/* [수정 포인트] 이미지 박스: items-end를 추가해 발바닥 위치 고정 */}
+      <div className="w-full aspect-square max-w-[160px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70 flex items-end justify-center pb-4">
+  <img
+    src={g.image}
+    alt={`${selectedRace} ${g.stage}`}
+    /* 발바닥이 바닥에 딱 붙도록 h-auto를 유지하고 단계를 적용 */
+    className={`${stepSizes[i]} h-auto object-contain transition-all duration-300`}
+  />
+</div>
+
+      {/* 하단 텍스트 (기존 코드 유지) */}
+      <div>
+        <p className="text-[10px] text-ivory/35">{g.age}</p>
+        <p className="text-sm font-medium text-ivory/80">{g.stage}</p>
+        <p className="mt-1 text-xs text-ivory/40 leading-relaxed hidden md:block text-balance">
+          {g.body}
+        </p>
+      </div>
+    </motion.div>
+  );
+})}
               </motion.div>
             </AnimatePresence>
           </div>
