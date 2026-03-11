@@ -148,7 +148,9 @@ const TargetSection = () => {
             "저 달생이… 어디서 키워?"
           </p>
           <p className="text-ivory/45 text-sm md:text-base max-w-md mx-auto leading-relaxed">
-            언젠가 모두가 이렇게 질문하고 있을거에요. 지금 달따라를 경험해보세요.
+            언젠가 모두가 이렇게 질문하고 있을거에요.
+            <br />
+            지금 달따라를 경험해보세요.
           </p>
         </motion.div>
       </div>
