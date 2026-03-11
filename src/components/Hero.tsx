@@ -2,6 +2,16 @@ import { motion } from "framer-motion";
 
 const assetBase = import.meta.env.BASE_URL || "/";
 const mainIllustration = `${assetBase}assets/main.png`;
+const titleDalttara = `${assetBase}assets/character/title_dalttara.png`;
+const titleRibbon = `${assetBase}assets/character/title_ribbon.png`;
+const titleStar = `${assetBase}assets/character/title_star.png`;
+const titleSwirl = `${assetBase}assets/character/title_swirl.png`;
+const ch01 = `${assetBase}assets/character/ch01.png`;
+const ch02 = `${assetBase}assets/character/ch02.png`;
+const ch03 = `${assetBase}assets/character/ch03.png`;
+const bgGrid = `${assetBase}assets/character/bg_grid.png`;
+const bgGlow1 = `${assetBase}assets/character/bg_glow1.png`;
+const bgGlow2 = `${assetBase}assets/character/bg_glow2.png`;
 
 // artifacts
 const star01 = `${assetBase}assets/artifacts/star01.png`;
@@ -17,6 +27,14 @@ const tags = ["AI 대화 기반 성장 게임", "10년 성장 사이클", "세�
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center px-6 md:px-10 relative overflow-hidden">
+      {/* bg_grid – 제일 뒤 배경 */}
+      <img
+        src={bgGrid}
+        alt=""
+        aria-hidden
+        className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none -z-10 opacity-100"
+      />
+
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] rounded-full bg-periwinkle/10 blur-[130px]" />
@@ -94,7 +112,7 @@ const Hero = () => {
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       />
 
-      <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-20">
+      <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-12">
         {/* Text side */}
         <motion.div
           className="space-y-8"
@@ -102,15 +120,34 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
-          <p className="font-serif text-sm text-periwinkle/75 leading-none">
-            달의 뒷면엔 어떤 생명체가 있을까?
-          </p>
+          <h1 className="relative inline-flex flex-col items-start z-10">
+            {/* ribbon – 달따라 로고 바로 위 */}
+            <img
+              src={titleRibbon}
+              alt="달의 뒷면엔 어떤 생명체가 있을까?"
+              className="w-[clamp(12rem,32vw,20rem)] pointer-events-none select-none -mb-4 md:-ml-14 -ml-6"
+            />
 
-          <h1
-            className="text-ivory leading-[0.92] tracking-tight text-[clamp(3.6rem,10.8vw,5.85rem)] font-black"
-            style={{ fontFamily: "'Noto Sans KR', sans-serif" }}
-          >
-            달따라
+            {/* 달따라 로고 + 장식 */}
+            <span className="relative inline-block -translate-y-4">
+              <img
+                src={titleStar}
+                alt=""
+                aria-hidden
+                className="absolute -top-11 -right-8 w-[100px] pointer-events-none select-none"
+              />
+              <img
+                src={titleSwirl}
+                alt=""
+                aria-hidden
+                className="absolute -bottom-6 right-1 pointer-events-none select-none"
+              />
+              <img
+                src={titleDalttara}
+                alt="달따라"
+                className="relative z-10 w-[clamp(14rem,40vw,22rem)] pointer-events-none select-none"
+              />
+            </span>
           </h1>
 
           <p className="text-ivory/65 text-lg leading-relaxed max-w-[22rem]">
@@ -139,13 +176,56 @@ const Hero = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1.4, delay: 0.25 }}
         >
-          <div className="absolute w-[280px] h-[280px] rounded-full bg-periwinkle/15 blur-[70px]" />
+          {/* bg_glow1 – 메인 일러 뒤 좌측 글로우 */}
+          <img
+            src={bgGlow1}
+            alt=""
+            aria-hidden
+            className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none -translate-x-1/3 -translate-y-1/2 top-1/4 opacity-50"
+          />
+
+          {/* bg_glow2 – 메인 일러 뒤 우측 글로우 */}
+          <img
+            src={bgGlow2}
+            alt=""
+            aria-hidden
+            className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none opacity-50 translate-y-1/2 translate-x-1/4"
+          />
+
+          {/* 메인 일러스트 (배경) */}
           <motion.img
             src={mainIllustration}
             alt="달따라 메인 일러스트"
-            className="relative w-full max-w-md mx-auto drop-shadow-glow"
-            animate={{ y: [0, -12, 0] }}
+            className="relative w-full max-w-[500px] mx-auto drop-shadow-glow"
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+          />
+
+          {/* 캐릭터들 (메인 일러 앞) */}
+          {/* ch01 – 왼쪽 하단 */}
+          <motion.img
+            src={ch01}
+            alt="달생이 ch01"
+            className="absolute right-[12%] translate-x-1/2 bottom-1/3 -translate-y-1/2 w-32 md:w-36 z-10 drop-shadow-glow pointer-events-none select-none"
+            animate={{ y: [0, 8, 0] }}
+            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+          />
+
+          {/* ch02 – 중앙 하단 */}
+          <motion.img
+            src={ch02}
+            alt="달생이 ch02"
+            className="absolute left-[5%] bottom-1/4 -translate-y-1/2 w-32 md:w-36 z-10 drop-shadow-glow pointer-events-none select-none"
+            animate={{ y: [0, -10, 0] }}
+            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+          />
+
+          {/* ch03 – 오른쪽 하단 */}
+          <motion.img
+            src={ch03}
+            alt="달생이 ch03"
+            className="absolute left-[45%] -translate-x-1/2 bottom-[62%] w-24 md:w-28 z-10 drop-shadow-glow pointer-events-none select-none"
+            animate={{ y: [0, -7, 0] }}
+            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
           />
         </motion.div>
       </div>
