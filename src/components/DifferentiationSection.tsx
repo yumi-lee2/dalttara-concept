@@ -37,7 +37,7 @@ const DifferentiationSection = () => {
         src={star01}
         alt=""
         aria-hidden
-        className="absolute top-14 left-6 w-11 pointer-events-none select-none"
+        className="absolute top-14 left-6 w-11 pointer-events-none select-none opacity-80"
         animate={{ y: [0, -8, 0], rotate: [0, -7, 0] }}
         transition={{ duration: 4.7, repeat: Infinity, ease: "easeInOut" }}
       />

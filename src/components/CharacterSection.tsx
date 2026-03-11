@@ -127,7 +127,7 @@ const CharacterSection = () => {
         src={star01}
         alt=""
         aria-hidden
-        className="absolute top-14 right-8 md:right-52 w-10 md:w-12 pointer-events-none select-none"
+        className="absolute top-14 -z-2 right-8 md:right-52 w-10 md:w-12 pointer-events-none select-none opacity-40"
         animate={{ y: [0, -8, 0], rotate: [0, -8, 0] }}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
       />
@@ -135,7 +135,7 @@ const CharacterSection = () => {
         src={star03}
         alt=""
         aria-hidden
-        className="absolute bottom-12 left-4 w-10 pointer-events-none select-none"
+        className="absolute bottom-12 left-4 w-10 pointer-events-none select-none opacity-40"
         animate={{ y: [0, -6, 0], rotate: [0, 6, 0] }}
         transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
@@ -143,7 +143,7 @@ const CharacterSection = () => {
         src={sparkle2}
         alt=""
         aria-hidden
-        className="absolute bottom-20 right-6 w-14 md:w-16 pointer-events-none select-none"
+        className="absolute bottom-20 right-6 w-14 md:w-16 pointer-events-none select-none opacity-50"
         animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.85, 1.1, 0.85] }}
         transition={{ duration: 3.8, repeat: Infinity, ease: "easeInOut", delay: 0.7 }}
       />
