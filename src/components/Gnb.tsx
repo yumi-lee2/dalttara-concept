@@ -34,7 +34,7 @@ const Gnb = () => {
 
   return (
     <header className="fixed inset-x-0 top-0 z-30 border-b border-ivory/5 bg-space-900/85 backdrop-blur-md">
-      <div className="mx-auto flex max-w-5xl items-center justify-between pr-5 py-3.5">
+      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 md:pr-5 md:px-0 py-3.5">
         <a href="#top" className="flex items-center gap-2">
           <img
             src={star02}

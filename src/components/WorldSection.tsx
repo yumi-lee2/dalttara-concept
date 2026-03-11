@@ -37,7 +37,7 @@ const WorldSection = () => {
         src={star02}
         alt=""
         aria-hidden
-        className="absolute top-16 right-10 md:right-48 w-12 md:w-16 pointer-events-none select-none"
+        className="absolute top-6 right-10 md:right-48 w-12 md:w-16 pointer-events-none select-none"
         animate={{ y: [0, -8, 0], rotate: [0, 6, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -88,29 +88,33 @@ const WorldSection = () => {
               <span className="text-ivory font-medium">지구를 동경하는 생명체들</span>이 살고
               있습니다.
             </p>
-            <p className="text-ivory/55 leading-relaxed">
+            <motion.p
+              className="text-ivory/55 leading-relaxed"
+              initial={{ opacity: 0, y: 30, filter: "blur(20px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              viewport={{ once: true, amount: 0.8 }}
+              transition={{ duration: 1.8, ease: [0.22, 1, 0.36, 1] }}
+            >
               그들이 지구에 가기 위해 충족해야 할 단 하나의 조건은{" "}
               <span className="text-moonmint">직업을 갖는 것</span>
-            </p>
+            </motion.p>
             <p className="text-ivory/55 leading-relaxed">
               직업을 갖기 위해 달의 뒷면에서 달생이들은 육성 기관에 다닙니다. 대화를 통해 배우고
               성장하며 자신만의 정체성을 만드는 달생이들, 최종 직업을 얻은 달생이는 마침내 동경하는 지구로 떠날 수 있어요.
             </p>
           </motion.div>
 
-          {/* Right: connected bullet points */}
-          <motion.div className="space-y-0" {...fadeUp(0.28)}>
+          {/* Right: arrow bullet points */}
+          <motion.div className="space-y-5" {...fadeUp(0.28)}>
             {worldPoints.map((item, i) => (
-              <div key={i} className="flex gap-4">
-                <div className="flex flex-col items-center pt-[6px] shrink-0">
-                  <div className="w-1.5 h-1.5 rounded-full bg-periwinkle/50" />
-                  {i < worldPoints.length - 1 && (
-                    <div className="w-px flex-1 min-h-[2rem] bg-periwinkle/12 mt-2" />
-                  )}
-                </div>
-                <div className={i < worldPoints.length - 1 ? "pb-7" : ""}>
-                  <p className="text-sm font-medium text-ivory/85">{item.title}</p>
-                </div>
+              <div key={i} className="flex items-center gap-3">
+                <span
+                  className="shrink-0 text-sm font-mono text-white"
+                  style={{ textShadow: "0 0 8px rgba(255,255,255,0.6)" }}
+                >
+                  {">"}
+                </span>
+                <p className="text-sm font-medium text-ivory/85">{item.title}</p>
               </div>
             ))}
           </motion.div>

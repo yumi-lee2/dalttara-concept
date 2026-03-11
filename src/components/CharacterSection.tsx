@@ -135,7 +135,7 @@ const CharacterSection = () => {
         src={star03}
         alt=""
         aria-hidden
-        className="absolute bottom-32 left-4 w-10 pointer-events-none select-none"
+        className="absolute bottom-12 left-4 w-10 pointer-events-none select-none"
         animate={{ y: [0, -6, 0], rotate: [0, 6, 0] }}
         transition={{ duration: 5.2, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
@@ -254,9 +254,9 @@ const CharacterSection = () => {
             </h3>
           </div>
 
-          {/* Connecting line (desktop) */}
           <div className="relative">
-            <div className="hidden md:block absolute top-[68px] left-[12.5%] right-[12.5%] h-px bg-periwinkle/10" />
+            {/* Dashed connector line – centered on boxes, behind cards */}
+            <div className="hidden md:block absolute top-[74px] left-[12.5%] right-[12.5%] border-t border-dashed border-periwinkle/20 pointer-events-none z-0" />
 
             <AnimatePresence mode="wait">
               <motion.div
@@ -273,20 +273,20 @@ const CharacterSection = () => {
                     initial={{ opacity: 0, y: 12 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.38, delay: i * 0.07 }}
-                    className="flex flex-col items-center gap-3 text-center"
+                    className="flex flex-col items-center gap-3 text-center relative"
                   >
-                    {/* Timeline dot */}
-                    <div className="relative w-full flex justify-center">
-                      <div className="w-2 h-2 rounded-full bg-periwinkle/35 z-10" />
-                    </div>
-
-                    <div className="w-full aspect-square max-w-[148px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70">
+                    <motion.div
+                      className="w-full aspect-square max-w-[148px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70 relative z-10 cursor-pointer"
+                      whileHover={{ y: [0, -6, 0], transition: { duration: 0.8, repeat: Infinity, ease: "easeInOut" } }}
+                    >
                       <img
                         src={g.image}
                         alt={`${selectedRace} ${g.stage}`}
-                        className="w-full h-full object-contain p-3"
+                        className={`w-full h-full object-contain ${g.stage === "알" ? "p-6" : "p-3"}`}
                       />
-                    </div>
+                    </motion.div>
+
+
                     <div>
                       <p className="text-[10px] text-ivory/35">{g.age}</p>
                       <p className="text-sm font-medium text-ivory/80">{g.stage}</p>

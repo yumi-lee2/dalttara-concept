@@ -77,6 +77,12 @@ body::after {
   background: rgba(168, 180, 232, 0.38);
 }
 
+/* Section big titles – line spacing between title lines */
+section h2 {
+  line-height: 1.3 !important;
+}
+
+
 /* Text selection */
 ::selection {
   background: rgba(168, 180, 232, 0.22);
