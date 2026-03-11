@@ -93,12 +93,7 @@ const Hero = () => {
       <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-12">
         {/* Text side */}
         <div className="space-y-8">
-          <motion.h1
-            className="relative inline-flex flex-col items-start z-10"
-            initial={{ opacity: 0, x: 80 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 2.34, ease: [0.22, 1, 0.36, 1] }}
-          >
+          <h1 className="relative inline-flex flex-col items-start z-10">
             {/* ribbon – 달따라 로고 바로 위 */}
             <img
               src={titleRibbon}
@@ -126,7 +121,7 @@ const Hero = () => {
                 className="relative z-10 w-[clamp(14rem,40vw,22rem)] pointer-events-none select-none"
               />
             </span>
-          </motion.h1>
+          </h1>
 
           <p className="text-ivory/65 text-lg leading-relaxed max-w-[22rem]">
             오늘 건넨 한마디가 달생이의 성향과 외형으로!

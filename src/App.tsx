@@ -6,10 +6,12 @@ import CoreGameplaySection from "./components/CoreGameplaySection";
 import CoreLoopSection from "./components/CoreLoopSection";
 import DifferentiationSection from "./components/DifferentiationSection";
 import TargetSection from "./components/TargetSection";
+import StarCursor from "./components/StarCursor";
 
 function App() {
   return (
     <div id="top" className="bg-space-900 min-h-screen text-ivory relative">
+      <StarCursor />
       <Gnb />
       <Hero />
       <WorldSection />
