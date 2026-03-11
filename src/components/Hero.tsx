@@ -1,4 +1,5 @@
-import { motion } from "framer-motion";
+import { motion, useAnimate } from "framer-motion";
+import { useEffect } from "react";
 
 const assetBase = import.meta.env.BASE_URL || "/";
 const mainIllustration = `${assetBase}assets/main.png`;
@@ -32,6 +33,20 @@ const textVariants = {
 };
 
 const Hero = () => {
+  const [starRef, animateStar] = useAnimate();
+
+  useEffect(() => {
+    const sequence = async () => {
+      await animateStar(starRef.current, { opacity: 1, scale: 1, rotate: 0 }, { duration: 0.7, delay: 0.9, type: "spring", stiffness: 200 });
+      animateStar(
+        starRef.current,
+        { y: [0, -6, 0, 4, 0], rotate: [0, 4, 0, -4, 0] },
+        { duration: 3.5, ease: "easeInOut", repeat: Infinity, repeatDelay: 1.2 }
+      );
+    };
+    sequence();
+  }, []);
+
   return (
     <section className="min-h-screen flex items-center justify-center px-6 md:px-10 pt-20 md:pt-0 relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-space-900 after:pointer-events-none after:z-10">
       {/* bg_grid – 제일 뒤 배경 */}
@@ -171,7 +186,7 @@ const Hero = () => {
                 src={titleSwirl}
                 alt=""
                 aria-hidden
-                className="absolute -bottom-6 right-1 pointer-events-none select-none"
+                className="absolute -bottom-6 right-1 pointer-events-none select-none opacity-80"
               />
               <img
                 src={titleDalttara}
