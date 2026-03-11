@@ -19,14 +19,12 @@ const star02 = `${assetBase}assets/artifacts/star02.png`;
 const star03 = `${assetBase}assets/artifacts/star03.png`;
 const sparkle1 = `${assetBase}assets/artifacts/sparkle1.png`;
 const sparkle2 = `${assetBase}assets/artifacts/sparkle2.png`;
-const sparkle3 = `${assetBase}assets/artifacts/sparkle3.png`;
-const sparkle6 = `${assetBase}assets/artifacts/sparkle6.png`;
 
 const tags = ["AI 대화 기반 성장 게임", "10년 성장 사이클", "세상에 단 하나뿐인 달생이"];
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-10 relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-space-900 after:pointer-events-none after:z-10">
+    <section className="min-h-screen flex items-center justify-center px-6 md:px-10 pt-20 md:pt-0 relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-space-900 after:pointer-events-none after:z-10">
       {/* bg_grid – 제일 뒤 배경 */}
       <img
         src={bgGrid}
@@ -36,8 +34,8 @@ const Hero = () => {
       />
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] rounded-full bg-periwinkle/10 blur-[130px]" />
-        <div className="absolute bottom-1/4 left-1/5 w-[320px] h-[320px] rounded-full bg-moonmint/[0.06] blur-[100px]" />
+        <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] rounded-full bg-periwinkle/[0.05] blur-[130px]" />
+        <div className="absolute bottom-1/4 left-1/5 w-[320px] h-[320px] rounded-full bg-moonmint/[0.03] blur-[100px]" />
       </div>
 
       {/* ── Artifact decorations ── */}
@@ -91,40 +89,21 @@ const Hero = () => {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}
       />
 
-      {/* sparkle3 (white cross) – center-ish */}
-      <motion.img
-        src={sparkle3}
-        alt=""
-        aria-hidden
-        className="absolute top-[38%] left-[46%] w-8 pointer-events-none select-none opacity-20 blur-[1px] md:opacity-60 md:blur-0"
-        animate={{ rotate: [0, 45, 0], scale: [0.9, 1.15, 0.9] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
-      />
-
-      {/* sparkle6 (gray 8-star) – large bg element top right */}
-      <motion.img
-        src={sparkle6}
-        alt=""
-        aria-hidden
-        className="absolute -top-6 right-8 md:right-40 w-32 md:w-44 pointer-events-none select-none opacity-10"
-        animate={{ rotate: [0, 360] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-      />
 
       <div className="relative max-w-6xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-16 items-center pt-12">
         {/* Text side */}
-        <motion.div
-          className="space-y-8"
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <h1 className="relative inline-flex flex-col items-start z-10">
+        <div className="space-y-8">
+          <motion.h1
+            className="relative inline-flex flex-col items-start z-10"
+            initial={{ opacity: 0, x: 80 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2.34, ease: [0.22, 1, 0.36, 1] }}
+          >
             {/* ribbon – 달따라 로고 바로 위 */}
             <img
               src={titleRibbon}
               alt="달의 뒷면엔 어떤 생명체가 있을까?"
-              className="w-[clamp(12rem,32vw,20rem)] pointer-events-none select-none -mb-4 md:-ml-14 -ml-6"
+              className="w-[clamp(12rem,32vw,20rem)] pointer-events-none select-none -mb-4 md:-ml-14 -ml-[2px]"
             />
 
             {/* 달따라 로고 + 장식 */}
@@ -147,7 +126,7 @@ const Hero = () => {
                 className="relative z-10 w-[clamp(14rem,40vw,22rem)] pointer-events-none select-none"
               />
             </span>
-          </h1>
+          </motion.h1>
 
           <p className="text-ivory/65 text-lg leading-relaxed max-w-[22rem]">
             오늘 건넨 한마디가 달생이의 성향과 외형으로!
@@ -166,7 +145,7 @@ const Hero = () => {
             ))}
           </div>
           {/* Scroll indicator */}
-        </motion.div>
+        </div>
 
         {/* Illustration side */}
         <motion.div
@@ -196,6 +175,7 @@ const Hero = () => {
             src={mainIllustration}
             alt="달따라 메인 일러스트"
             className="relative w-full max-w-[500px] mx-auto drop-shadow-glow"
+            animate={{ y: [0, -12, 0] }}
             transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
           />
 
