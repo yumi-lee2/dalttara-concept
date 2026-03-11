@@ -6,8 +6,8 @@ const icon = `${assetBase}assets/artifacts/icon.png`;
 const sections = [
   { id: "world", label: "세계관" },
   { id: "character", label: "달생이" },
-  { id: "core-gameplay", label: "게임플레이" },
-  { id: "core-loop", label: "코어 루프" },
+  { id: "core-gameplay", label: "플레이" },
+  { id: "core-loop", label: "루프" },
   { id: "differentiation", label: "차별화" },
   { id: "target", label: "타겟" },
 ];
@@ -40,12 +40,12 @@ const Gnb = () => {
             src={icon}
             alt=""
             aria-hidden
-            className="h-10 w-auto object-contain"
+            className="h-6 w-auto object-contain absolute left-2 sm:relative sm:left-4 lg:left-0"
           />
         </a>
 
         {/* 모바일: 전체 항목 가로 스크롤 */}
-        <nav className="flex gap-4 text-[12px] text-ivory/40 md:hidden overflow-x-auto scrollbar-none">
+        <nav className="flex gap-3 text-[12px] text-ivory/40 md:hidden overflow-x-auto scrollbar-none">
           {sections.map((s) => (
             <a
               key={s.id}
