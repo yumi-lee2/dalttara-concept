@@ -124,9 +124,7 @@ const TargetSection = () => {
             Target Audience
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-ivory leading-tight">
-            이런 플레이어라면
-            <br className="md:hidden" />
-            딱이에요!
+            이런 플레이어라면 딱이에요!
           </h2>
           <div className="flex flex-col items-center gap-3">
             {targets.map((t) => (
