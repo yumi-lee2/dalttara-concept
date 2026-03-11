@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 const assetBase = import.meta.env.BASE_URL || "/";
-const star02 = `${assetBase}assets/artifacts/star02.png`;
+const icon = `${assetBase}assets/artifacts/icon.png`;
 
 const sections = [
   { id: "world", label: "세계관" },
@@ -37,10 +37,10 @@ const Gnb = () => {
       <div className="mx-auto flex max-w-5xl items-center justify-between px-6 md:pr-5 md:px-0 py-3.5">
         <a href="#top" className="flex items-center gap-2">
           <img
-            src={star02}
+            src={icon}
             alt=""
             aria-hidden
-            className="h-6 w-auto object-contain"
+            className="h-10 w-auto object-contain"
           />
         </a>
 
