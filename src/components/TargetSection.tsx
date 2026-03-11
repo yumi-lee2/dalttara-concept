@@ -36,7 +36,7 @@ const TargetSection = () => {
         src={star02}
         alt=""
         aria-hidden
-        className="absolute top-16 left-6 md:left-16 w-14 md:w-16 pointer-events-none select-none"
+        className="absolute top-16 left-6 md:left-16 w-14 md:w-16 pointer-events-none select-none opacity-20 md:opacity-100"
         animate={{ y: [0, -10, 0], rotate: [0, 8, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -44,7 +44,7 @@ const TargetSection = () => {
         src={star01}
         alt=""
         aria-hidden
-        className="absolute top-20 right-8 md:right-20 w-12 pointer-events-none select-none"
+        className="absolute top-20 right-8 md:right-20 w-12 pointer-events-none select-none opacity-20 md:opacity-100"
         animate={{ y: [0, -8, 0], rotate: [0, -7, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
       />
@@ -52,7 +52,7 @@ const TargetSection = () => {
         src={star03}
         alt=""
         aria-hidden
-        className="absolute bottom-28 left-8 md:left-20 w-10 md:w-12 pointer-events-none select-none"
+        className="absolute bottom-28 left-8 md:left-20 w-10 md:w-12 pointer-events-none select-none opacity-20 md:opacity-100"
         animate={{ y: [0, -7, 0], rotate: [0, 6, 0] }}
         transition={{ duration: 5.3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       />
@@ -60,7 +60,7 @@ const TargetSection = () => {
         src={star02}
         alt=""
         aria-hidden
-        className="absolute bottom-20 right-10 md:right-24 w-10 pointer-events-none select-none"
+        className="absolute bottom-20 right-10 md:right-24 w-10 pointer-events-none select-none opacity-20 md:opacity-100"
         animate={{ y: [0, -9, 0], rotate: [0, -8, 0] }}
         transition={{ duration: 4.8, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
       />
@@ -124,7 +124,9 @@ const TargetSection = () => {
             Target Audience
           </p>
           <h2 className="font-serif text-3xl md:text-4xl text-ivory leading-tight">
-            이런 플레이어라면 딱이에요!
+            이런 플레이어라면
+            <br className="md:hidden" />
+            딱이에요!
           </h2>
           <div className="flex flex-col items-center gap-3">
             {targets.map((t) => (
