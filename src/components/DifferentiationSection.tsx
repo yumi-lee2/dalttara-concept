@@ -11,14 +11,14 @@ const diffs = [
     title: "대화가 만드는 캐릭터",
     bold: "확률이 아닌\n플레이어의 말 한마디",
     desc: "어떤 선택지를 고르기 보단 어떤 말을 건넸는지에 따라 달생이의 성향이 결정돼요.",
-    numColor: "text-moonmint/20",
+    numColor: "text-white/10",
   },
   {
     number: "02",
     title: "대화가 재화가 되는 구조",
     bold: "이야기 그 자체가\n소유하고 거래할 수 있는 자산",
     desc: "대화 기록이 곧 고유한 NFT, 플레이어가 만든 이야기 자체가 소유하고 거래할 수 있는 자산이 됩니다.",
-    numColor: "text-periwinkle/20",
+    numColor: "text-white/10",
   },
 ];
 

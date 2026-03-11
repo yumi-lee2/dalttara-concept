@@ -26,7 +26,7 @@ const tags = ["AI 대화 기반 성장 게임", "10년 성장 사이클", "세�
 
 const Hero = () => {
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 md:px-10 relative overflow-hidden">
+    <section className="min-h-screen flex items-center justify-center px-6 md:px-10 relative overflow-hidden after:absolute after:bottom-0 after:left-0 after:right-0 after:h-32 after:bg-gradient-to-b after:from-transparent after:to-space-900 after:pointer-events-none after:z-10">
       {/* bg_grid – 제일 뒤 배경 */}
       <img
         src={bgGrid}
@@ -34,7 +34,6 @@ const Hero = () => {
         aria-hidden
         className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none -z-10 opacity-100"
       />
-
       {/* Ambient background glows */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-1/3 right-1/3 w-[500px] h-[500px] rounded-full bg-periwinkle/10 blur-[130px]" />
@@ -47,7 +46,7 @@ const Hero = () => {
         src={star02}
         alt=""
         aria-hidden
-        className="absolute top-24 left-6 w-14 md:w-16 pointer-events-none select-none"
+        className="absolute top-10 left-[40%] w-14 md:w-16 pointer-events-none select-none opacity-30 blur-[1px] md:opacity-100 md:blur-0"
         animate={{ y: [0, -10, 0], rotate: [0, 8, 0] }}
         transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
       />
@@ -57,7 +56,7 @@ const Hero = () => {
         src={star01}
         alt=""
         aria-hidden
-        className="absolute bottom-24 left-8 w-10 md:w-12 pointer-events-none select-none"
+        className="absolute bottom-24 left-8 w-10 md:w-12 pointer-events-none select-none opacity-30 blur-[1px] md:opacity-100 md:blur-0"
         animate={{ y: [0, -7, 0], rotate: [0, -6, 0] }}
         transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
       />
@@ -67,7 +66,7 @@ const Hero = () => {
         src={star03}
         alt=""
         aria-hidden
-        className="absolute top-20 right-6 md:right-32 w-12 md:w-14 pointer-events-none select-none"
+        className="absolute top-20 right-6 md:right-32 w-12 md:w-14 pointer-events-none select-none opacity-30 blur-[1px] md:opacity-100 md:blur-0"
         animate={{ y: [0, -9, 0], rotate: [0, -10, 0] }}
         transition={{ duration: 5.5, repeat: Infinity, ease: "easeInOut", delay: 1.2 }}
       />
@@ -77,7 +76,7 @@ const Hero = () => {
         src={sparkle1}
         alt=""
         aria-hidden
-        className="absolute top-1/2 left-4 w-16 md:w-20 pointer-events-none select-none"
+        className="absolute top-1/2 left-4 w-16 md:w-20 pointer-events-none select-none opacity-30 blur-[1px] md:opacity-100 md:blur-0"
         animate={{ opacity: [0.5, 1, 0.5], scale: [0.9, 1.05, 0.9] }}
         transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
       />
@@ -87,7 +86,7 @@ const Hero = () => {
         src={sparkle2}
         alt=""
         aria-hidden
-        className="absolute bottom-20 right-6 md:right-20 w-14 md:w-18 pointer-events-none select-none"
+        className="absolute bottom-20 right-6 md:right-20 w-14 md:w-18 pointer-events-none select-none opacity-30 blur-[1px] md:opacity-100 md:blur-0"
         animate={{ opacity: [0.4, 0.9, 0.4], scale: [0.85, 1.1, 0.85] }}
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1.6 }}
       />
@@ -97,7 +96,7 @@ const Hero = () => {
         src={sparkle3}
         alt=""
         aria-hidden
-        className="absolute top-[38%] left-[46%] w-8 pointer-events-none select-none opacity-60"
+        className="absolute top-[38%] left-[46%] w-8 pointer-events-none select-none opacity-20 blur-[1px] md:opacity-60 md:blur-0"
         animate={{ rotate: [0, 45, 0], scale: [0.9, 1.15, 0.9] }}
         transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 0.6 }}
       />
