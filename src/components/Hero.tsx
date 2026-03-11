@@ -165,42 +165,45 @@ const Hero = () => {
             className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none opacity-50 translate-y-1/2 translate-x-1/4"
           />
 
-          {/* 메인 일러스트 (배경) */}
-          <motion.img
-            src={mainIllustration}
-            alt="달따라 메인 일러스트"
-            className="relative w-full max-w-[500px] mx-auto drop-shadow-glow"
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-          />
+          {/* 일러스트 + 캐릭터를 하나의 기준 컨테이너로 묶음 */}
+          <div className="relative w-full max-w-[500px] mx-auto">
+            {/* 메인 일러스트 (배경) */}
+            <motion.img
+              src={mainIllustration}
+              alt="달따라 메인 일러스트"
+              className="w-full drop-shadow-glow"
+              animate={{ y: [0, -1, 0] }}
+              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
+            />
 
-          {/* 캐릭터들 (메인 일러 앞) */}
-          {/* ch01 – 왼쪽 하단 */}
-          <motion.img
-            src={ch01}
-            alt="달생이 ch01"
-            className="absolute right-[12%] translate-x-1/2 bottom-1/3 -translate-y-1/2 w-32 md:w-36 z-10 drop-shadow-glow pointer-events-none select-none"
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
-          />
+            {/* 캐릭터들 (메인 일러 앞) — 위치·크기 모두 % 기준으로 일러스트에 고정 */}
+            {/* ch01 – 오른쪽 */}
+            <motion.img
+              src={ch01}
+              alt="달생이 ch01"
+              className="absolute right-[12%] translate-x-1/2 bottom-1/3 -translate-y-1/2 w-[26%] z-10 drop-shadow-glow pointer-events-none select-none"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.3 }}
+            />
 
-          {/* ch02 – 중앙 하단 */}
-          <motion.img
-            src={ch02}
-            alt="달생이 ch02"
-            className="absolute left-[5%] bottom-1/4 -translate-y-1/2 w-32 md:w-36 z-10 drop-shadow-glow pointer-events-none select-none"
-            animate={{ y: [0, -10, 0] }}
-            transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
-          />
+            {/* ch02 – 왼쪽 */}
+            <motion.img
+              src={ch02}
+              alt="달생이 ch02"
+              className="absolute left-[5%] bottom-1/4 -translate-y-1/2 w-[26%] z-10 drop-shadow-glow pointer-events-none select-none"
+              animate={{ y: [0, -10, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut", delay: 0.8 }}
+            />
 
-          {/* ch03 – 오른쪽 하단 */}
-          <motion.img
-            src={ch03}
-            alt="달생이 ch03"
-            className="absolute left-[45%] -translate-x-1/2 bottom-[62%] w-24 md:w-28 z-10 drop-shadow-glow pointer-events-none select-none"
-            animate={{ y: [0, -7, 0] }}
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
-          />
+            {/* ch03 – 중앙 상단 */}
+            <motion.img
+              src={ch03}
+              alt="달생이 ch03"
+              className="absolute left-[45%] -translate-x-1/2 bottom-[62%] w-[21%] z-10 drop-shadow-glow pointer-events-none select-none"
+              animate={{ y: [0, -4, 0], rotate: [-2, 2, -2] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.4 }}
+            />
+          </div>
         </motion.div>
       </div>
     </section>
