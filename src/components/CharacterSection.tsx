@@ -270,35 +270,37 @@ const CharacterSection = () => {
                 transition={{ duration: 0.28 }}
                 className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-5"
               >
-                {growth.map((g, i) => (
-                  <motion.div
-                    key={g.stage}
-                    initial={{ opacity: 0, y: 12 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.38, delay: i * 0.07 }}
-                    className="flex flex-col items-center gap-3 text-center relative"
-                  >
+                {growth.map((g, i) => {
+                  const stepSizes = ["w-[60px]", "w-[90px]", "w-[100px]", "w-[140px]"];
+                  return (
                     <motion.div
-                      className="w-full aspect-square max-w-[148px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70 relative z-10 cursor-pointer"
-                      whileHover={{ y: [0, -6, 0], transition: { duration: 0.8, repeat: Infinity, ease: "easeInOut" } }}
+                      key={g.stage}
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.38, delay: i * 0.07 }}
+                      className="flex flex-col items-center gap-3 text-center relative"
                     >
-                      <img
-                        src={g.image}
-                        alt={`${selectedRace} ${g.stage}`}
-                        className={`w-full h-full object-contain ${g.stage === "알" ? "p-6" : g.stage === "자아 형성기" && selectedRace === "포포" ? "p-5" : "p-3"}`}
-                      />
+                      <motion.div
+                        className="w-full aspect-square max-w-[160px] mx-auto rounded-2xl overflow-hidden border border-ivory/[0.07] bg-space-900/70 flex items-end justify-center pb-4 relative z-10 cursor-pointer"
+                        whileHover={{ y: [0, -6, 0], transition: { duration: 0.8, repeat: Infinity, ease: "easeInOut" } }}
+                      >
+                        <img
+                          src={g.image}
+                          alt={`${selectedRace} ${g.stage}`}
+                          className={`${stepSizes[i]} h-auto object-contain transition-all duration-300`}
+                        />
+                      </motion.div>
+
+                      <div>
+                        <p className="text-[10px] text-ivory/35">{g.age}</p>
+                        <p className="text-sm font-medium text-ivory/80">{g.stage}</p>
+                        <p className="mt-1 text-xs text-ivory/40 leading-relaxed hidden md:block text-balance">
+                          {g.body}
+                        </p>
+                      </div>
                     </motion.div>
-
-
-                    <div>
-                      <p className="text-[10px] text-ivory/35">{g.age}</p>
-                      <p className="text-sm font-medium text-ivory/80">{g.stage}</p>
-                      <p className="mt-1 text-xs text-ivory/40 leading-relaxed hidden md:block">
-                        {g.body}
-                      </p>
-                    </div>
-                  </motion.div>
-                ))}
+                  );
+                })}
               </motion.div>
             </AnimatePresence>
           </div>
