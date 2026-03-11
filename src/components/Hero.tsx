@@ -114,7 +114,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-ivory/65 leading-relaxed max-w-[22rem]">
-            오늘 건넨 한마디가 달생이의 성격과 외형으로!
+            오늘 건넨 한마디가 달생이의 성향과 외형으로!
             <br />
             이 세상에 같은 달생이는 단 한 명도 없어요.
           </p>

@@ -22,8 +22,8 @@ const bogle3 = `${assetBase}assets/character/bogle_3.png`;
 const bogle4 = `${assetBase}assets/character/bogle_4.png`;
 
 const traits = [
-  "대화할수록 고유한 성격 형성",
-  "성격에 따라 생김새와 말투에 변화",
+  "대화할수록 고유한 성향 형성",
+  "성향에 따라 생김새와 말투에 변화",
   "나이가 들수록 더욱 뚜렷한 자아로 성장",
 ];
 
@@ -173,7 +173,7 @@ const CharacterSection = () => {
           </h2>
           <p className="mt-5 text-ivory/60 leading-relaxed">
             달생이는 플레이어와의 대화를 통해 성장하는 생명체입니다. 어떤 말을 건네느냐에 따라
-            성격도, 생김새도, 미래도 달라집니다.
+            성향도, 생김새도, 미래도 달라집니다.
           </p>
           <ul className="mt-5 space-y-2">
             {traits.map((t) => (
