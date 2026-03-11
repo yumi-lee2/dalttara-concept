@@ -71,16 +71,16 @@ const CoreGameplaySection = () => {
               Core Gameplay
             </p>
             <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl text-ivory leading-tight">
-              매일의 대화로 쌓이는
+              매일 대화로 만들어가는
               <br />
-              달생이와의 하루
+              달생이와의 일상
             </h2>
             <p className="text-ivory/60 leading-relaxed">
               플레이어는 달생이와 매일 대화를 나누며 성장 과정을 함께합니다.
             </p>
             <p className="text-ivory/55 leading-relaxed">
-              오늘 있었던 일, 고민, 사소한 감정까지 모두 이 하루의 기록이 됩니다. 이 대화는 단순한
-              채팅이 아니라, 달생이의 성향과 미래를 바꾸는 입력값입니다.
+              오늘 있었던 일, 고민, 사소한 감정까지 모두 기록이 돼요. 단순한 채팅을 넘어
+              달생이의 성격과 미래까지 바꿀 수 있어요.
             </p>
 
             {/* Flow indicator */}

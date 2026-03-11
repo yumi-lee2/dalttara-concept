@@ -90,11 +90,11 @@ const WorldSection = () => {
             </p>
             <p className="text-ivory/55 leading-relaxed">
               그들이 지구에 가기 위해 충족해야 할 단 하나의 조건은{" "}
-              <span className="text-moonmint">직업을 갖는 것</span>입니다.
+              <span className="text-moonmint">직업을 갖는 것</span>
             </p>
             <p className="text-ivory/55 leading-relaxed">
-              달의 뒷면에는 이를 돕기 위한 육성 기관이 존재하며, 달생이들은 대화를 통해 배우고
-              성장하며 자신만의 정체성을 만들어 갑니다. 직업을 얻은 달생이는 지구로 향합니다.
+              직업을 갖기 위해 달의 뒷면에서 달생이들은 육성 기관에 다닙니다. 대화를 통해 배우고
+              성장하며 자신만의 정체성을 만드는 달생이들, 최종 직업을 얻은 달생이는 마침내 동경하는 지구로 떠날 수 있어요.
             </p>
           </motion.div>
 

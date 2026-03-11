@@ -103,7 +103,7 @@ const Hero = () => {
           transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         >
           <p className="font-serif text-sm text-periwinkle/75 leading-none">
-            달의 뒷면에서 오는 이야기
+            달의 뒷면엔 어떤 생명이 있을까?
           </p>
 
           <h1
@@ -114,9 +114,9 @@ const Hero = () => {
           </h1>
 
           <p className="text-ivory/65 leading-relaxed max-w-[22rem]">
-            오늘 건넨 한마디가 달생이의 성격을 만듭니다.
+            오늘 건넨 한마디가 달생이의 성격과 외형으로!
             <br />
-            같은 달생이는 세상에 단 하나도 없습니다.
+            이 세상에 같은 달생이는 단 한 명도 없어요.
           </p>
 
           <div className="flex flex-wrap gap-2 pt-1">

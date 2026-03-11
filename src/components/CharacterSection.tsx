@@ -22,9 +22,9 @@ const bogle3 = `${assetBase}assets/character/bogle_3.png`;
 const bogle4 = `${assetBase}assets/character/bogle_4.png`;
 
 const traits = [
-  "대화할수록 고유한 성향이 형성됩니다",
-  "성향에 따라 생김새와 말투가 달라집니다",
-  "나이가 들수록 더 뚜렷한 자아를 가지게 됩니다",
+  "대화할수록 고유한 성격 형성",
+  "성격에 따라 생김새와 말투에 변화",
+  "나이가 들수록 더욱 뚜렷한 자아로 성장",
 ];
 
 type RaceKey = "포포" | "후후" | "보글";
@@ -301,8 +301,8 @@ const CharacterSection = () => {
           </div>
 
           <p className="text-sm text-ivory/55 font-serif">
-            동일한 성장 구조 위에서, 플레이어의 대화와 선택이 쌓여 매번 전혀 다른 달생이의 인생이
-            만들어집니다.
+            동일한 성장 구조지만, 플레이어의 대화와 순간의 선택이 쌓여 전혀 다른 달생이가
+            탄생합니다. 물론 달생이의 삶도 다 달라요.
           </p>
         </motion.div>
 
