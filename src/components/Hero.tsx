@@ -214,18 +214,24 @@ const Hero = () => {
         {/* ── Illustration side – 순차 입장 애니메이션 ── */}
         <div className="relative flex items-center justify-center">
           {/* bg_glow1 */}
-          <img
+          <motion.img
             src={bgGlow1}
             alt=""
             aria-hidden
-            className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none -translate-x-1/3 -translate-y-1/2 top-1/4 opacity-50"
+            className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none -translate-x-1/3 -translate-y-1/2 top-1/4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1.8, delay: 0.5, ease: "easeOut" }}
           />
           {/* bg_glow2 */}
-          <img
+          <motion.img
             src={bgGlow2}
             alt=""
             aria-hidden
-            className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none opacity-50 translate-y-1/2 translate-x-1/4"
+            className="absolute w-[160%] max-w-none -z-9 pointer-events-none select-none translate-y-1/2 translate-x-1/4"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1.8, delay: 0.8, ease: "easeOut" }}
           />
 
           {/* 일러스트 + 캐릭터 컨테이너 */}
