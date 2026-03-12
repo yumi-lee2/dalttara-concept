@@ -1,7 +1,7 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1773171520327,
-  "projectRoot": "/Users/nhn/Desktop/달따라/dalttara-concept",
+  "lastScanned": 1773308719779,
+  "projectRoot": "/Users/nhn/Desktop/dalttara/dalttara-concept",
   "techStack": {
     "languages": [
       {
@@ -65,22 +65,34 @@
       "public",
       "src"
     ],
-    "gitBranches": null
+    "gitBranches": {
+      "defaultBranch": "main",
+      "branchingStrategy": null
+    }
   },
   "customNotes": [],
   "directoryMap": {
+    "dist": {
+      "path": "dist",
+      "purpose": "Distribution/build output",
+      "fileCount": 1,
+      "lastAccessed": 1773308719761,
+      "keyFiles": [
+        "index.html"
+      ]
+    },
     "public": {
       "path": "public",
       "purpose": "Public files",
       "fileCount": 0,
-      "lastAccessed": 1773171520321,
+      "lastAccessed": 1773308719769,
       "keyFiles": []
     },
     "src": {
       "path": "src",
       "purpose": "Source code",
       "fileCount": 4,
-      "lastAccessed": 1773171520321,
+      "lastAccessed": 1773308719769,
       "keyFiles": [
         "App.tsx",
         "index.css",
@@ -88,12 +100,24 @@
         "vite-env.d.ts"
       ]
     },
+    "dist/assets": {
+      "path": "dist/assets",
+      "purpose": "Static assets",
+      "fileCount": 4,
+      "lastAccessed": 1773308719770,
+      "keyFiles": [
+        "egg.png",
+        "index-BEfCxphz.js",
+        "index-CGrHtlpW.css"
+      ]
+    },
     "public/assets": {
       "path": "public/assets",
       "purpose": "Static assets",
-      "fileCount": 2,
-      "lastAccessed": 1773171520321,
+      "fileCount": 3,
+      "lastAccessed": 1773308719770,
       "keyFiles": [
+        "Starlight_Village_Wanderer.mp3",
         "egg.png",
         "main.png"
       ]
@@ -102,7 +126,7 @@
       "path": "src/components",
       "purpose": "UI components",
       "fileCount": 9,
-      "lastAccessed": 1773171520321,
+      "lastAccessed": 1773308719772,
       "keyFiles": [
         "CharacterSection.tsx",
         "CoreGameplaySection.tsx",
@@ -112,81 +136,15 @@
   },
   "hotPaths": [
     {
-      "path": "src/components/DifferentiationSection.tsx",
-      "accessCount": 15,
-      "lastAccessed": 1773173581854,
-      "type": "file"
-    },
-    {
-      "path": "src/components/CoreLoopSection.tsx",
-      "accessCount": 9,
-      "lastAccessed": 1773173397403,
-      "type": "file"
-    },
-    {
       "path": "src/App.tsx",
-      "accessCount": 8,
-      "lastAccessed": 1773172834838,
-      "type": "file"
-    },
-    {
-      "path": "src/components/CoreGameplaySection.tsx",
-      "accessCount": 8,
-      "lastAccessed": 1773173397436,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Gnb.tsx",
-      "accessCount": 7,
-      "lastAccessed": 1773172828645,
-      "type": "file"
-    },
-    {
-      "path": "src/components/WorldSection.tsx",
-      "accessCount": 5,
-      "lastAccessed": 1773171671868,
-      "type": "file"
-    },
-    {
-      "path": "src/components/ValueSystemSection.tsx",
-      "accessCount": 5,
-      "lastAccessed": 1773172819330,
-      "type": "file"
-    },
-    {
-      "path": "src/components/Hero.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1773171563398,
-      "type": "file"
-    },
-    {
-      "path": "",
-      "accessCount": 4,
-      "lastAccessed": 1773173391522,
-      "type": "directory"
-    },
-    {
-      "path": "src/components/CharacterSection.tsx",
-      "accessCount": 4,
-      "lastAccessed": 1773173397429,
-      "type": "file"
-    },
-    {
-      "path": "src/components/TargetSection.tsx",
       "accessCount": 3,
-      "lastAccessed": 1773173582223,
+      "lastAccessed": 1773308791643,
       "type": "file"
-    },
-    {
-      "path": "src",
-      "accessCount": 2,
-      "lastAccessed": 1773173561970,
-      "type": "directory"
     },
     {
       "path": "package.json",
       "accessCount": 1,
-      "lastAccessed": 1773241660286,
+      "lastAccessed": 1773308754102,
       "type": "file"
     }
   ],

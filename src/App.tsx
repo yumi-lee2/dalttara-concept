@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react"; // useState 추가
+import { Analytics } from "@vercel/analytics/react";
 import Gnb from "./components/Gnb";
 import Hero from "./components/Hero";
 import WorldSection from "./components/WorldSection";
@@ -41,7 +42,6 @@ function App() {
         src="/assets/Starlight_Village_Wanderer.mp3"
         loop 
       />
-
       <StarCursor />
       
       {/* 4. 핵심! Gnb에 상태와 함수를 전달합니다 */}
@@ -54,6 +54,7 @@ function App() {
       <CoreLoopSection />
       <DifferentiationSection />
       <TargetSection />
+      <Analytics />
     </div>
   );
 }
